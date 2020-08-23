@@ -26,7 +26,7 @@ ML只是A.I.其中一個領域
 ### How to answer yes or no?
 模型選擇：從hypothesis set中找到對的hypothesis
 * 透過PLA演算法(Perceptron Learning Algorithm)來分類  
-![]()  
+![](./screenshot/PLA1.png)  
 上圖中是我們的classifier  
 `wt + 1`為修正後的權重，`t`則是代表第幾輪  
 
