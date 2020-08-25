@@ -23,6 +23,32 @@ ML只是A.I.其中一個領域
 * machine learning v.s. statistics?  
 統計是ML的重要工具 :cry:
 
+### 學習方法：
+| 方法        | 有沒有label           | 描述  |
+| ------------- |:-------------:| -----:|
+| supervised learning | 全都有 | 二元分類，多元分類，回歸。按照輸出空間的話，還可以在區分出結構化學習(細節放在下面)。 |
+| unsupervised learning | 沒有 | clustering |
+| semi- | 有些有 |  |
+| reinforcement learning | 我們給的不是label | 寵物訓練的例子很好懂。我們給machine的output feedback，告訴他是對的還是不對的。最重要的是這個學習的過程是sequential的，machine會透過一筆一筆資料學習，而非我們一次餵大筆資料。 |
+
+> 上面提到的結構化學習(structure learning)？在NLP的領域很常見。假設我們要區分單字的詞性，然而單字的詞性往往不能只看個體，而是需要透過整個句子的架構去判斷。所以y的輸出可能是 {pronoun/verb/noun, pronoun/verb/pronoun, noun/verb/noun, pronoun/verb...}。我們只知道類別之間會有緊密的關係。
+
+根據協議可以分三種learning：
+| 方法        | 描述  |
+| ------------- |-----:|
+| batch learning | 一次性餵入所有的training sample，創建model |
+| online learning | sequentially學習，hypothesis是動態的不斷進步。所以跟我們的PLA和強化學習都很合得來，PLA會透過一筆一筆的錯誤去作修正... |
+| active learning | 我們希望machine自己問問題，**improve hypothesis with fewer labels by asking questions strategically** |
+
+### 來談談我們不同種類的input (feature)
+| 輸入        | 描述  |
+| ------------- |-----:|
+| concrete feature | 具體的特徵，對ML也是最容易使用的輸入。e.g. 字跡對稱性，密度 |
+| raw feature | 稍微抽象 e.g. 灰階256*256的各個數值 |
+| abstract feature | 完全抽象，沒有含義 |
+
+所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
+
 ### How to answer yes or no?
 模型選擇：從hypothesis set中找到對的hypothesis
 * 透過PLA演算法(Perceptron Learning Algorithm)來分類  
