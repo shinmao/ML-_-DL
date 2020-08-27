@@ -1,7 +1,6 @@
 # ML-_-DL
 
 ## Applied Machine Learning Course
-===================================
 
 ### Tool: MATLAB
 #### Leture 1
