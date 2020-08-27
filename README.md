@@ -16,9 +16,9 @@
  branch可以透過網頁版的  Create a new branch for this commit 
  ![IMAGE](https://github.com/shinmao/ML-_-DL/blob/dev3/1598490094535.jpg)
  
- GIT bash
- git branch " branch名稱"
- git branch  查看自己在哪個branch
+ GIT bash;
+ git branch " branch名稱";
+ git branch  查看自己在哪個branch;
  
  
  ##
