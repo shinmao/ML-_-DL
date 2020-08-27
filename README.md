@@ -46,3 +46,6 @@ It is too difficult to design a set of rules by hand.
 -Unsupervise Learning
 
 -Reinforcement Learning
+
+#### Defination
+What is "Representation", "Evaluation", and "Generalization"?
