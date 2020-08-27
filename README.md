@@ -47,5 +47,5 @@ It is too difficult to design a set of rules by hand.
 
 -Reinforcement Learning
 
-#### Defination
+#### Definition
 What is "Representation", "Evaluation", and "Generalization"?
