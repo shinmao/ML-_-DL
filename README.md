@@ -5,8 +5,11 @@
 
 分支是為了將修改記錄的整體流程分開儲存，為一個專案的不同版本進行備份，讓分開的分支不受其他分支的影響，所以在同一個數據庫裡可以同時進行多個不同的修改
  
+ ![IMAGE](https://github.com/shinmao/ML-_-DL/blob/dev3/pr-retargeting-diagram1.png)
+ 
  ### 分支的優點
  多人協作的時候或是要嘗試新東西、debug的時，新增一個branch並在上面做更改、嘗試，可以有效管理分支、保留最原始的檔案，也能讓紀錄妥善保存才不會亂掉
  
 branch可以透過網頁版的  Create a new branch for this commit 選項建立或是利用 git branch cat建立
 
+ ![IMAGE](https://github.com/shinmao/ML-_-DL/blob/dev3/1598490094535.jpg)
