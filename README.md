@@ -2,7 +2,7 @@
 
 ## Applied Machine Learning Course
 
-### Tool: MATLAB
+#### Tool: MATLAB
 #### Leture 1
 
 **_Automatic discovery of regularities in data(我們要讓機器自動發現數據中的規律性)_**
