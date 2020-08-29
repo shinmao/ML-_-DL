@@ -24,8 +24,8 @@ ML只是A.I.其中一個領域
 統計是ML的重要工具 :cry:
 
 ### 學習方法：
-| 方法        | 有沒有label           | 描述  |
-| ------------- |:-------------:| -----:|
+| 方法        | 有沒有label | 描述  |
+| ------------- |:-------------:|:-----|
 | supervised learning | 全都有 | 二元分類，多元分類，回歸。按照輸出空間的話，還可以在區分出結構化學習(細節放在下面)。 |
 | unsupervised learning | 沒有 | clustering |
 | semi- | 有些有 |  |
@@ -35,14 +35,32 @@ ML只是A.I.其中一個領域
 
 根據協議可以分三種learning：
 | 方法        | 描述  |
-| ------------- |-----:|
+| ------------- |:-----|
 | batch learning | 一次性餵入所有的training sample，創建model |
 | online learning | sequentially學習，hypothesis是動態的不斷進步。所以跟我們的PLA和強化學習都很合得來，PLA會透過一筆一筆的錯誤去作修正... |
 | active learning | 我們希望machine自己問問題，**improve hypothesis with fewer labels by asking questions strategically** |
 
+### 學習的可行性
+上面我們探討了許多種學習方法  
+可是你有沒有想過: 學習真的可行嗎?  
+的確，如果我們不加以限制條件，你永遠有理由可以說**我這個學習方法，回答了錯的答案！**  
+就算我們在training set上都得到了完美的結果，但誰知道在這set之外的數據，我們的model能否一樣完美呢？  
+其實這很正常，我們想在training set外還能得到完美的結果本就是不可能的，畢竟**No free lunch**嘛！  
+No free lunch定理是說：沒有一種model能在任何情況下都表現預測得很完美！所以我們說這個model比那個model好，也只是針對特定的條件下去做比較的。  
+> 啊講到這裡是想跟我說，預測本來就是不可能ㄇ？那這樣還要learn啥？
+
+根據我們的Hoeffding's inequality(霍夫丁不等式)，我們的誤差值是有一個上限的。儘管我們不知道真正的答案是多少，sample的數量越多，誤差就會越少！
+> 總結一下：如果樣本數夠大，樣本中h(x) != f(x)的機率可以推導出整個抽樣空間中h(x) != f(x)的機率。兩者的機率是PAC，所以如果前面機率是小的，那後面也是小的。
+
+我們再引入`Ein(h)`和`Eout(h)`的觀念到Hoeffding's inequality中，`Ein(h)`是指training sample上答案錯的機率，而`Eout(h)`是指整個數據上答案錯的機率。不等式表明了`Ein(h)`是很接近`Eout(h)`的 (PAC的觀念)，可是這在兩error都很大的情況下也有可能成立。所以我們要選好model讓`Ein(h)`是小的，`Eout(h)`也才會是小的！  
+
+以上hoeffding的誤差上限都是根據一個hypothesis的說法，**但如果是很多hypothesis呢**？  
+![](screenshot/multi-hoeffding.png)  
+hoeffding不等式右邊就會乘上`M`(hypothesis的個數)然後作為union bound。問題其實很好處理，如果`M`的個數有限，那麼還是有個上限在！
+
 ### 來談談我們不同種類的input (feature)
 | 輸入        | 描述  |
-| ------------- |-----:|
+| ------------- |:-----|
 | concrete feature | 具體的特徵，對ML也是最容易使用的輸入。e.g. 字跡對稱性，密度 |
 | raw feature | 稍微抽象 e.g. 灰階256*256的各個數值 |
 | abstract feature | 完全抽象，沒有含義 |
