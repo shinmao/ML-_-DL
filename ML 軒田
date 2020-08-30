@@ -34,6 +34,20 @@
 
 
 #### Leture 4 Feasibility of Learning
+
 怎樣是好的學習?
 * 好的學習:對於h而言Ein(h)是小的，且演算法選擇的h趨近於g ==> 'g=f' PAC
-* 不好的學習； Ein通常不小，演算法被迫選擇h作為g ==> 'g!=f' PAC
+* 不好的學習:Ein通常不小，演算法被迫選擇h作為g ==> 'g!=f' PAC
+* 實際情況:演算法自己做選擇H(ex:PLA),而非被迫選擇h
+
+有很多的H，應該用哪種呢?
+* 比較合理的演算法(PLA/pocket):選擇一個擁有最小Fin(Hm)當作g的Hm
+
+只有一個H(hypothesis)的Bad Data:
+*Eout(H)和Ein(H)差很多
+有很多H的Bad Data:
+*存在部分H會有Eout(H)和Ein(H)差很多的問題(演算法無法自由做選擇)
+
+
+
+
