@@ -105,7 +105,7 @@ M and dvc:
 1.Yes! 會發現dvc帶入P[BAD]=<2*(2N)^dvc*exp(...)公式，因為dvc小，P[BAD]也會變小
 2.No! 因為dvc小，限制太多
 
-在數量大的M:
+在數量大的dvc:
 1.No! P[BAD]增加
 2.Yes! 很多權利
 
