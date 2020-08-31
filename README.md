@@ -77,7 +77,7 @@ Tatget
 	
 	increase data size
 	
-	increase Gerror tolerance
+	increase G error tolerance (寬容度)
 	
 
 
