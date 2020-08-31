@@ -86,7 +86,7 @@ Learning到底可不可行?
 ![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/6.jpg "圖片名稱")
 ![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/7.jpg "圖片名稱")
 
-##### M and dvc:
+#### M and dvc:
 
 ##### 為了衡量一下M(amount of hypothesis set)和dvc大比較好還是小，提出兩個問提:
 - 1.我們可以確定Eout(g)靠近Ein(g)嗎?
