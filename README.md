@@ -70,3 +70,4 @@ Break point
 B(N,K)
 
 ### The VC Dimension  
+![image](https://github.com/shinmao/ML-_-DL/blob/dev3/5b5689131a6c3.png)
