@@ -72,10 +72,15 @@ B(N,K)
 ### The VC Dimension  
 
 Tatget 
+
 	decrease model complexity dvc
+	
 	increase data size
-	increase Gerror to;erance
+	
+	increase Gerror tolerance
+	
 
 
-Theory N ≈ 100,000*dvc 
+Theory N ≈ 100,000*dvc
+
 Prctice N ≈ 10d*vc
