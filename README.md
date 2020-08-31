@@ -10,23 +10,30 @@
 非監督式學習
 	
 	無特定輸出
-
+	
 REINFORCEMENT LEARNING 增強式學習
-OUTPUT 逞罰/獎勵 (序列發生)
-E.G. 廣告系統(顧客是否點及)、玩牌系統
+	OUTPUT 逞罰/獎勵 (序列發生)
+	E.G. 廣告系統(顧客是否點及)、玩牌系統
 
 BATCH LEARNING 批量學習 (DUCK FEEDING)
+
 	SPAM, PATIENT, CANSER, COIN 
 	A VERRY COMMOM PROTOOL
 
 ONLINE LEARNING 線上學習 (PASSIVE SEQUENTIAL)
 	PLA, REINFORCEMENT LEARNING
 	IMPROVES HYPOTHESIS
-ACTIVE LEARNING (QUESTION ASKING) SEQUENTIAL
+
+ACTIVE LEARNING (QUESTION ASKING) 
+		SEQUENTIAL
+
 
 CONCRETE FEATURE 
+
 RAW FEATURES
+
 RATING PREDICTION PROBLEM
+
 NO PHYSICAL MWANING 
 
 
@@ -47,13 +54,13 @@ Must <=2^n
 n>m <<2^n 
  
 
-positive rays N+1 2
+	positive rays N+1 2
 
-positive intervals 1/2 N^2 + 1/2N^1+ 1/2N^0<<2^N 3
+	positive intervals 1/2 N^2 + 1/2N^1+ 1/2N^0<<2^N 3
 
-convex set 2^N no
+	convex set 2^N no
 
-2D <2^n 4
+	2D <2^n 4
 
 Break point
 
