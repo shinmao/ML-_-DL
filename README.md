@@ -34,9 +34,11 @@ NO PHYSICAL MWANING
 大數法則
 In sample error is close to out of sample error
 
+
 Ein(g)≈Eout(g)
 Ein(g)足夠小
 Make sure that Eout(g) is close enough to Ein(g)
+
 
 Effective Number of Line
 Union bound ≈ unlimited (over-estimating)
@@ -44,9 +46,13 @@ Union bound ≈ unlimited (over-estimating)
 Must <=2^n 
 n>m <<2^n 
  
+
 positive rays N+1 2
+
 positive intervals 1/2 N^2 + 1/2N^1+ 1/2N^0<<2^N 3
+
 convex set 2^N no
+
 2D <2^n 4
 
 Break point
