@@ -71,10 +71,11 @@ B(N,K)
 
 ### The VC Dimension  
 
-![image](https://github.com/shinmao/ML-_-DL/blob/dev3/5b5689131a6c3.png)
+Tatget 
+	decrease model complexity dvc
+	increase data size
+	increase Gerror to;erance
 
-自由度是可以任意調節的。 VC Dimension代表了假設空間的分類能力，即反映了H的自由度，產生dichotomy的數量，也就等於features的個數，但也不是絕對的。
 
-
-	Theory N ≈ 100,000*dvc 
-	Prctice N ≈ 10d*vc
+Theory N ≈ 100,000*dvc 
+Prctice N ≈ 10d*vc
