@@ -1,4 +1,4 @@
-### TYPE OF LEARNING
+### TYPES OF LEARNING
 監督式學習
 
 	都有輸出
