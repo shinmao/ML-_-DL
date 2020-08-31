@@ -1,4 +1,4 @@
-TYPE OF LEARNING
+### TYPE OF LEARNING
 監督式學習
 
 	都有輸出
@@ -30,7 +30,7 @@ RATING PREDICTION PROBLEM
 NO PHYSICAL MWANING 
 
 
-Feasibility of learning 
+### Feasibility of learning 
 大數法則
 In sample error is close to out of sample error
 
@@ -51,7 +51,7 @@ convex set 2^N no
 
 Break point
 
-Theory of Generalization
+### Theory of Generalization
 B(N,K)
 
-The VC Dimension  
+### The VC Dimension  
