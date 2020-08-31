@@ -72,4 +72,48 @@ Learning到底可不可行?
 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
 
 
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/2.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/3.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/4.jpg "圖片名稱")
+
+
+
+
+#### Leture 6 Theory of Generalization
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/4.5.jpg "圖片名稱")
+
+
+#### Leture 7 The VC Dimension 
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/5.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/6.jpg "圖片名稱")
+
+M and dvc:
+為了衡量一下M(amount of hypothesis set)和dvc大比較好還是小，提出兩個問提:
+1.我們可以確定Eout(g)靠近Ein(g)嗎?
+2.Ein(g)他夠小嗎?
+
+在數量小的M:
+1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
+2.No! 因為M小，選擇太少了
+
+在數量大的M:
+1.No! P[BAD]增加
+2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
+
+
+在數量小的dvc:
+1.Yes! 會發現dvc帶入P[BAD]=<2*(2N)^dvc*exp(...)公式，因為dvc小，P[BAD]也會變小
+2.No! 因為dvc小，限制太多
+
+在數量大的M:
+1.No! P[BAD]增加
+2.Yes! 很多權利
+
+
+
+
+
+
+
+
 
