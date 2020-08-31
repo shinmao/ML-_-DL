@@ -76,5 +76,5 @@ B(N,K)
 自由度是可以任意調節的。 VC Dimension代表了假設空間的分類能力，即反映了H的自由度，產生dichotomy的數量，也就等於features的個數，但也不是絕對的。
 
 
-	N ≈ 100,000dvc Theory
-	N ≈ 10dvc is enough
+	Theory N ≈ 100,000dvc 
+	Prctice N ≈ 10dvc
