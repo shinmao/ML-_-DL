@@ -70,4 +70,11 @@ Break point
 B(N,K)
 
 ### The VC Dimension  
+
 ![image](https://github.com/shinmao/ML-_-DL/blob/dev3/5b5689131a6c3.png)
+
+自由度是可以任意調節的。 VC Dimension代表了假設空間的分類能力，即反映了H的自由度，產生dichotomy的數量，也就等於features的個數，但也不是絕對的。
+
+
+	N ≈ 100,000dvc Theory
+	N ≈ 10dvc is enough
