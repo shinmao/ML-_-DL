@@ -1,10 +1,16 @@
 TYPE OF LEARNING
 監督式學習
+
 	都有輸出
+	
 半監督式學習
+		
 	一點輸出
+
 非監督式學習
+	
 	無特定輸出
+
 REINFORCEMENT LEARNING 增強式學習
 OUTPUT 逞罰/獎勵 (序列發生)
 E.G. 廣告系統(顧客是否點及)、玩牌系統
@@ -12,6 +18,7 @@ E.G. 廣告系統(顧客是否點及)、玩牌系統
 BATCH LEARNING 批量學習 (DUCK FEEDING)
 	SPAM, PATIENT, CANSER, COIN 
 	A VERRY COMMOM PROTOOL
+
 ONLINE LEARNING 線上學習 (PASSIVE SEQUENTIAL)
 	PLA, REINFORCEMENT LEARNING
 	IMPROVES HYPOTHESIS
