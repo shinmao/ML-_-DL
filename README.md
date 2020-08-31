@@ -1,4 +1,4 @@
-#### Leture 3 Types of Learning
+### Leture 3 Types of Learning
 
 
 | 模型名稱 | 適合數據類型 | 例子 | 
@@ -31,7 +31,7 @@
 | Abstract Feature | 沒有具體特徵，需要人或機器轉換成具體特徵，沒有描述 |
 
 
-#### Leture 4 Feasibility of Learning
+### Leture 4 Feasibility of Learning
 
 怎樣是好的學習?
 * 好的學習:對於h而言Ein(h)是小的，且演算法選擇的h趨近於g ==> 'g=f' PAC
@@ -54,7 +54,7 @@ Learning到底可不可行?
 
 
 
-#### Leture 5 Training V.S. Testing
+### Leture 5 Training V.S. Testing
 在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
 
 ##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
@@ -78,11 +78,11 @@ Learning到底可不可行?
 
 
 
-#### Leture 6 Theory of Generalization
+### Leture 6 Theory of Generalization
 ![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/5.jpg "圖片名稱")
 
 
-#### Leture 7 The VC Dimension 
+### Leture 7 The VC Dimension 
 ![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/6.jpg "圖片名稱")
 ![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/7.jpg "圖片名稱")
 
