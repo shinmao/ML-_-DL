@@ -1,27 +1,50 @@
-# ML-_-DL
+TYPE OF LEARNING
+監督式學習
+	都有輸出
+半監督式學習
+	一點輸出
+非監督式學習
+	無特定輸出
+REINFORCEMENT LEARNING 增強式學習
+OUTPUT 逞罰/獎勵 (序列發生)
+E.G. 廣告系統(顧客是否點及)、玩牌系統
 
- ## 什麼是branch(分支)
- Use a branch to isolate development work without affecting other branches in the repository. Each repository has one default branch, and can have multiple other branches. You can merge a branch into another branch using a pull request.
+BATCH LEARNING 批量學習 (DUCK FEEDING)
+	SPAM, PATIENT, CANSER, COIN 
+	A VERRY COMMOM PROTOOL
+ONLINE LEARNING 線上學習 (PASSIVE SEQUENTIAL)
+	PLA, REINFORCEMENT LEARNING
+	IMPROVES HYPOTHESIS
+ACTIVE LEARNING (QUESTION ASKING) SEQUENTIAL
 
-分支是為了將修改記錄的整體流程分開儲存，為一個專案的不同版本進行備份，讓分開的分支不受其他分支的影響，所以在同一個數據庫裡可以同時進行多個不同的修改
- 
- ![IMAGE](https://github.com/shinmao/ML-_-DL/blob/dev3/pr-retargeting-diagram1.png)
- 
- ### 分支的優點
- 多人協作的時候或是要嘗試新東西、debug的時，新增一個branch並在上面做更改、嘗試，可以有效管理分支、保留最原始的檔案，也能讓紀錄妥善保存才不會亂掉
- 
- ### branch的建立
- 
- 網頁版
- branch可以透過網頁版的  Create a new branch for this commit 
- ![IMAGE](https://github.com/shinmao/ML-_-DL/blob/dev3/1598490094535.jpg)
- 
- GIT bash
- 
- git branch " branch名稱"
- 
- git branch  查看自己在哪個branch
- 
- 
- ####
+CONCRETE FEATURE 
+RAW FEATURES
+RATING PREDICTION PROBLEM
+NO PHYSICAL MWANING 
 
+
+Feasibility of learning 
+大數法則
+In sample error is close to out of sample error
+
+Ein(g)≈Eout(g)
+Ein(g)足夠小
+Make sure that Eout(g) is close enough to Ein(g)
+
+Effective Number of Line
+Union bound ≈ unlimited (over-estimating)
+線性可分 (shatter)
+Must <=2^n 
+n>m <<2^n 
+ 
+positive rays N+1 2
+positive intervals 1/2 N^2 + 1/2N^1+ 1/2N^0<<2^N 3
+convex set 2^N no
+2D <2^n 4
+
+Break point
+
+Theory of Generalization
+B(N,K)
+
+The VC Dimension  
