@@ -38,7 +38,7 @@ ML只是A.I.其中一個領域
 | ------------- |:-----|
 | batch learning | 一次性餵入所有的training sample，創建model |
 | online learning | sequentially學習，hypothesis是動態的不斷進步。所以跟我們的PLA和強化學習都很合得來，PLA會透過一筆一筆的錯誤去作修正... |
-| active learning | 我們希望machine自己問問題，**improve hypothesis with fewer labels by asking questions strategically** |
+| active learning | 我們希望machine自己問問題，**improve hypothesis with fewer labels by asking questions strategically** (通常用於取得label成本較高的時候) |
 
 ### 學習的可行性
 上面我們探討了許多種學習方法  
@@ -57,6 +57,20 @@ No free lunch定理是說：沒有一種model能在任何情況下都表現預�
 以上hoeffding的誤差上限都是根據一個hypothesis的說法，**但如果是很多hypothesis呢**？  
 ![](screenshot/multi-hoeffding.png)  
 hoeffding不等式右邊就會乘上`M`(hypothesis的個數)然後作為union bound。問題其實很好處理，如果`M`的個數有限，那麼還是有個上限在！
+
+> 好！所以接下來我們要處理的就是這個M的問題。這個M的問題也是不小...
+
+如果M很小的話，看起來我們的bound會比較低，但這也代表我們hypothesis的選擇比較少！  
+反過來的話，hypothesis選擇多，我們的bound又變大了！  
+我們得拿個東西來取代 M  
+
+我們回到上面的union bound看看，我們把每個hypothesis的bad event假設為互相獨立，所以把全部的機率加起來。但是真的有互相獨立嗎？如果兩個hypothesis很相似，那他們的bad event理所當然會重疊吧！所以我們可能高估了這個bound...  
+
+我想把hypothesis的數量減少，所以我把相似的hypothesis都分到同一群。分類的方法由input的結果來區分，假設在二D空間中的一個點，我們可以把它區分為 o 類，也可以是 x 類。那其實也代表，我們所有的hypothesis只有分兩種: 1. 把這個點區分為 o 類的，2. 把這個點區分為 x 類的。先不要急著說可以把hypothesis定義為`2^N`類。假設三點共線，那我們怎麼樣都**沒辦法分到八類**的，到這裡其實我們就證明了: 就算有無限多的hypothesis，我們還是能夠學習的！  
+
+> 只要我們能夠保證我們自己的 m << 2^N，也就是右邊趨近於0，那麼 M 再怎麼大也只是個笑話！
+
+我們現在可以把原本的hypothesis set換成**dichotomy**，他是那些能夠把空間中的點完美分類的線的集合，size上限為`2^N`。把每個hypothesis依賴於sample數的變化搞成一個growth function的話，那我們會希望growth function會是polynomial的，而非exponential的。最小需要多少sample才能讓growth function小於exponential就是我們要找的break point。
 
 ### 來談談我們不同種類的input (feature)
 | 輸入        | 描述  |
