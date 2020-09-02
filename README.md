@@ -1,30 +1,4 @@
-### Leture 3 Types of Learning
-
-
-| 模型名稱 | 適合數據類型 | 例子 | 
-| ------------- | :-------------: | :----- |
-| Binary Classification | 是非題 | 1,-1 |
-| Multiclass Classification | 分種類 | 視覺辨識 |
-| Regression | 連續數字 | 股票、溫度 |
-
-
-
-| 學習名稱        | 解釋 | 例子  |
-| ------------- |:-------------:|:-----|
-| Supervised Learning | 每個x都有相對應的y| |
-| Unsupervised Learning | 每個x都沒有相對應的y | 1.clustering 2.desity estimation 3.outlier detection |
-| Semi-supervised Learning | 每個x不一定都有相對應的y | 1.FB的照片辨識朋友功能(有些人有label了) 2.藥效預測 (label比較昂貴時適用)|
-| Reinforcement Learning | 對或錯的方式訓練機器 | 1.廣告系統(利用客戶反應訓練) 2.計算玩牌的勝算 |
-
-
-| 協議方法名稱        | 解釋  |
-| ------------- |:-----|
-| Batch Learning (批量學習) | 填鴨式教育 |
-| Online Learning | 被動學習 |
-| Active Learning | 主動提問(用於label比較貴的數據) |
-
-<<<<<<< HEAD
-=======
+----------------------------ㄚ茂的筆記
 ### 學習方法：
 | 方法        | 有沒有label | 描述  |
 | ------------- |:-------------:|:-----|
@@ -89,7 +63,36 @@ hoeffding不等式右邊就會乘上`M`(hypothesis的個數)然後作為union b
 ![](./screenshot/PLA1.png)  
 上圖中是我們的classifier  
 `wt + 1`為修正後的權重，`t`則是代表第幾輪  
->>>>>>> 580cc1a64f86ad615ed767327d8c2635b4787912
+
+----------------------------ㄚ柔的筆記
+
+### Leture 3 Types of Learning
+
+
+| 模型名稱 | 適合數據類型 | 例子 | 
+| ------------- | :-------------: | :----- |
+| Binary Classification | 是非題 | 1,-1 |
+| Multiclass Classification | 分種類 | 視覺辨識 |
+| Regression | 連續數字 | 股票、溫度 |
+
+
+
+| 學習名稱        | 解釋 | 例子  |
+| ------------- |:-------------:|:-----|
+| Supervised Learning | 每個x都有相對應的y| |
+| Unsupervised Learning | 每個x都沒有相對應的y | 1.clustering 2.desity estimation 3.outlier detection |
+| Semi-supervised Learning | 每個x不一定都有相對應的y | 1.FB的照片辨識朋友功能(有些人有label了) 2.藥效預測 (label比較昂貴時適用)|
+| Reinforcement Learning | 對或錯的方式訓練機器 | 1.廣告系統(利用客戶反應訓練) 2.計算玩牌的勝算 |
+
+
+| 協議方法名稱        | 解釋  |
+| ------------- |:-----|
+| Batch Learning (批量學習) | 填鴨式教育 |
+| Online Learning | 被動學習 |
+| Active Learning | 主動提問(用於label比較貴的數據) |
+
+
+
 
 | 輸入名稱        | 解釋  |
 | ------------- |:-----|
