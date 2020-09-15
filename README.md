@@ -189,6 +189,7 @@ Learning到底可不可行?
 
 ##### VC bound在有雜訊的情況下會不會work?
 依然會
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L8-1.jpg "圖片名稱")
 
 ##### 目標分佈P(y|x) (理想的mini-target + noise):
 例子:P(<font color="blue">o<font>|x)=0.7, P(<font color="#f00">x<font>|x)=0.3
@@ -207,7 +208,9 @@ Learning到底可不可行?
 (2) squared error
 - 算y~和y之間的距離
 - 常用在regression
-
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L8-2.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L8-3.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L8-4.jpg "圖片名稱")
 ##### 總的來說，ideal mini-target是noise和error組成的
 
 
@@ -222,5 +225,8 @@ Learning到底可不可行?
 - Linear Regression Hypothsis: h(x)=w^T*x
 - 找一條residuals最小的線
 - 是連續、可以微分且有谷(有最小值)的函數
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L9-1.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L9-2.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/L9-3.jpg "圖片名稱")
 ##### 要如何知道他是否真的有學習到
 看Eout(wLIN)是否是好的(最小值)
