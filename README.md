@@ -184,3 +184,43 @@ Learning到底可不可行?
 - 1.No! P[BAD]增加
 - 2.Yes! 很多權利
 
+
+### Leture 8 Noise and Error
+
+##### VC bound在有雜訊的情況下會不會work?
+依然會
+
+##### 目標分佈P(y|x) (理想的mini-target + noise):
+例子:P(<font color="blue">o<font>|x)=0.7, P(<font color="#f00">x<font>|x)=0.3
+- ideal mini-target f(x)=o
+- noise level=0.3
+  
+##### Goal of Learning:
+預測ideal mini-target(w.r.t P(y|x))
+在often-seen inputs(w.r.t P(y|x))
+  
+##### 兩個主要的error measure:
+(1) 0/1 error:
+- 直接用於對或錯
+- 常用在classification
+
+(2) squared error
+- 算y~和y之間的距離
+- 常用在regression
+
+##### 總的來說，ideal mini-target是noise和error組成的
+
+
+##### True negative, false negative有趣的例子:
+- Supermarket和CIA指紋辨識的false accecpt和false reject的成本
+
+找Ew in(h)最小值，即可得出最好的Ew in(h)
+
+### Leture 9 Linear Regression
+- 特徵x=(x0,x1,x2,....,xd)
+- 加權sum: y ≈ Σ(i=0->d)wixi
+- Linear Regression Hypothsis: h(x)=w^T*x
+- 找一條residuals最小的線
+- 是連續、可以微分且有谷(有最小值)的函數
+##### 要如何知道他是否真的有學習到
+看Eout(wLIN)是否是好的(最小值)
