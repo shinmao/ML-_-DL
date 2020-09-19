@@ -7,7 +7,7 @@
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
   - [validation](#validation)
   - [學習的可行性](#學習的可行性)
-  - [How to answer yes or no?](#how-to-answer-yes-or-no)
+  - [linear classification](#linear-classification)
   - [linear regression](#linear-regression)
   - [Refer](#refer)
 
@@ -57,7 +57,7 @@ ML只是A.I.其中一個領域
 `μ`: 平均值  
 `σ^2`: 變異數，也就是標準差的平方  
 `1/(σ^2)`: 精準度  
-<img src="./screenshot/gaussian.png" style="zoom:50%">  
+<img src="./screenshot/gaussian.png" width="50%">  
 看了這張圖，有沒有清楚許多呢？  
 而且lvalue必然大於等於0，然後積分也為1。所以把他當成概率密度函數也不為過！  
 當然真實世界中我們不會是一元的分佈，像上面在講貝式的時候我們就有`D`維的向量，`D`維的高斯分佈大概長這樣吧(看看就好的概念)...  
@@ -69,7 +69,7 @@ ML只是A.I.其中一個領域
 <a href="https://www.codecogs.com/eqnedit.php?latex=p(x|\mu,&space;\sigma&space;^2)=&space;\prod_{n=1}^{N}N(xn|\mu,&space;\sigma&space;^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(x|\mu,&space;\sigma&space;^2)=&space;\prod_{n=1}^{N}N(xn|\mu,&space;\sigma&space;^2)" title="p(x|\mu, \sigma ^2)= \prod_{n=1}^{N}N(xn|\mu, \sigma ^2)" /></a>  
 這其實就是gaussian的likelihood function啦！  
 一樣我們的目標是maximum likelihood，實際應用中我們會考慮求likelihood的對數值更為方便。因為對數函數是單調遞增，所以我們最大化likelihood相當於在最大化對數值。  
-<img src="screenshot/loggaussian.png" style="zoom:30%">  
+<img src="screenshot/loggaussian.png" width="50%">  
 下面兩個便是我們的sample mean和sample variance。細部的數學證明我就不在這裡耗篇幅囉...  
 
 當我們找到maximum likelihood的解時，會發現居然低估了variance。這也是我們maximum likelihood的局限性。這種問題叫作**bias**，跟polynomial curve fitting中會遇到的overfitting有關！當我們點N的數量繼續上升的時候，那bias的現象會越來越不嚴重。  
@@ -196,9 +196,74 @@ hoeffding不等式右邊就會乘上`M`(hypothesis的個數)然後作為union b
 
 我們現在可以把原本的hypothesis set換成**dichotomy**，他是那些能夠把空間中的點完美分類的線的集合，size上限為`2^N`。把每個hypothesis依賴於sample數的變化搞成一個growth function的話，那我們會希望growth function會是polynomial的，而非exponential的。最小需要多少sample才能讓growth function小於exponential就是我們要找的break point。
 
-## How to answer yes or no?
-模型選擇：從hypothesis set中找到對的hypothesis
-* 透過PLA演算法(Perceptron Learning Algorithm)來分類  
+## linear classification
+分類的目標是將input分成k個離散的類型 e.g. C1, C2, ...Ck。  
+模型通常是linear function。如果dataset可以被我們的model完整得分類，那這個dataset可以稱作linear separable。  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y(x)&space;=&space;f(w^{T}x&space;&plus;&space;w0)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y(x)&space;=&space;f(w^{T}x&space;&plus;&space;w0)" title="y(x) = f(w^{T}x + w0)" /></a>    
+最簡單的情況下，模型也是由`w`和`x`的線性函數所組成的。這一類model被稱作推廣的線性模型(generalized linear model)，但跟下一個section的regression不一樣的地方是: `f()`將原本的線性函數轉換為非線性函數。  
+
+> 線性判別函數(linear discriminant function)  
+discriminant function透過input將該筆data分類  
+最簡單的形式就是上面見到的`y(x) = w^Tx + w0`，`w`為權重的向量，`w0`為bias。  
+如果將這個公式設為0當作我們的決策平面：若`y(x) >= 0`則分到A類，否則分到B類。那我們假設x1, x2為這個決策平面上的兩個點(兩點相連則為決策平面上的一條向量)，代入公式：  
+```
+y(x1) = w^Tx1 + w0 = 0
+y(x2) = w^Tx2 + w0 = 0
+w^T(x1 - x2) = 0
+```
+所以決策平面上的向量跟`w^T`作內積會得到0: 代表`w`是一條決策平面的法向量，換句話說`w`決定了我們平面的方向！  
+再舉個例子：從原點到某個點x的向量 = `x'`(x向量在平面上的投影) + 垂直向量  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x&space;=&space;x'&space;&plus;&space;r\cdot&space;\frac{w}{|w|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x&space;=&space;x'&space;&plus;&space;r\cdot&space;\frac{w}{|w|}" title="x = x' + r\cdot \frac{w}{|w|}" /></a>  
+我們兩邊同時乘上`w^T` 並且加上 `w0`  
+代入等式`y(x) = w^Tx + w0`和`y(x') = w^Tx' + w0 = 0`，最後可以得到  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=y(x)&space;=&space;r&space;\cdot&space;\frac{w\cdot&space;w^T}{|w|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y(x)&space;=&space;r&space;\cdot&space;\frac{w\cdot&space;w^T}{|w|}" title="y(x) = r \cdot \frac{w\cdot w^T}{|w|}" /></a>  
+而 `w * w^T = |w|^2`:  
+
+可得  <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{y(x)}{|w|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{y(x)}{|w|}" title="r = \frac{y(x)}{|w|}" /></a>  
+
+> 那我們的discriminant function會怎麼處理multiple class呢？  
+這裡先附上一張圖：  
+<img src = "./screenshot/1vrand1v1.png" width = "50%">  
+
+左邊那張圖是**one versus rest**的處理方法，會用(k-1)個classifier切分輸入空間，缺點是會有不知道如何是好的區域。  
+右邊的圖則是**one versus one**的處理方法，一個classifier用來區分任意兩個class，所以會有(k*(k - 1)/2)個classifier，然而還是會有那個神秘區域。  
+  
+好的！解決辦法就是引入 Class M的判別函數: `ym(x) = wm^Tx + wm0`，由m個線性函數組合而成的。  
+對於某個點x，其他所有非m類的Class n，若是 `ym(x) > yn(x)`，則我們會將x分到m類。所以Cm類與Cn類的決策平面將為 `ym(x) = yn(x)`  
+
+進一步我們可以得到  <a href="https://www.codecogs.com/eqnedit.php?latex=(wm&space;-&space;wn)^Tx&space;&plus;&space;(wm0&space;-&space;wn0)&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(wm&space;-&space;wn)^Tx&space;&plus;&space;(wm0&space;-&space;wn0)&space;=&space;0" title="(wm - wn)^Tx + (wm0 - wn0) = 0" /></a>  
+
+> Fisher線性判別函數  
+
+這個方法是透過投影進低維實現的，先來張圖：  
+<img src = "./screenshot/fisher.png" width = "50%">  
+可以看到上圖投影進`w^T`的方向，結果造成兩個class的點重疊很多，這是因為投影後會丟失很多訊息。所以在使用這個方法的時候需要慎選`w^T`。上圖如果是選水平線作為投影的目標那就能完美區分了。至於區分的標準則是為y值設置一個threshold。這也正是LDA的目標 (Linear Discriminant Analysis)，那我們要怎麼找到這個絕佳的方向呢？  
+
+假設最簡單的binary classification: C1, C2  
+m1則為C1群的平均向量，m2則為C2群的平均向量  
+要看兩個的區分程度可以從 `m2 - m1` 所得：而我們要找到一個`w^T`讓他投影後得到 `w^T(m2 - m1)` 的最大值！  
+fisher的思想除了讓mean的投影分得越開，還有讓同樣的class內部的方差變得越小。  
+想當於這個的比值：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=max&space;\frac{(m2&space;-&space;m1)^2}{s1^2&space;&plus;&space;s2^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?max&space;\frac{(m2&space;-&space;m1)^2}{s1^2&space;&plus;&space;s2^2}" title="max \frac{(m2 - m1)^2}{s1^2 + s2^2}" /></a>  
+分子m的差距越大越好，而分母則為兩個class內部的方差總和：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=si^2&space;=&space;\sum_{x->Ci}^{}(w^Tx&space;-&space;mi)^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?si^2&space;=&space;\sum_{x->Ci}^{}(w^Tx&space;-&space;mi)^2" title="si^2 = \sum_{x->Ci}^{}(w^Tx - mi)^2" /></a>  
+略過公式的代入細節，我們可以得到：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=J(w)&space;=&space;\frac{w^T\cdot&space;SB\cdot&space;w}{w^T\cdot&space;SW\cdot&space;w}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?J(w)&space;=&space;\frac{w^T\cdot&space;SB\cdot&space;w}{w^T\cdot&space;SW\cdot&space;w}" title="J(w) = \frac{w^T\cdot SB\cdot w}{w^T\cdot SW\cdot w}" /></a>  
+在`J(w)`最大值的時候我們可以發現：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=SB\cdot&space;w&space;=&space;(m1&space;-&space;m2)(m1&space;-&space;m2)^Tw" target="_blank"><img src="https://latex.codecogs.com/gif.latex?SB\cdot&space;w&space;=&space;(m1&space;-&space;m2)(m1&space;-&space;m2)^Tw" title="SB\cdot w = (m1 - m2)(m1 - m2)^Tw" /></a>  
+我們關心的是方向而非大小，所以像後面的`(m1-m2)^Tw`都可以不用理他了，會發現`w`在`SW^-1(m1 - m2)`的方向上。(SW為class內協方差矩陣  
+看看下面的圖會更有感覺呦：  
+<img src = "./screenshot/lda.png" width = "50%">
+
+> 透過PLA演算法(Perceptron Learning Algorithm)來分類  
+
 ![](./screenshot/PLA1.png)  
 上圖中是我們的classifier  
 `wt + 1`為修正後的權重，`t`則是代表第幾輪  
