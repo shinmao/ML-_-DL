@@ -204,6 +204,7 @@ hoeffding不等式右邊就會乘上`M`(hypothesis的個數)然後作為union b
 最簡單的情況下，模型也是由`w`和`x`的線性函數所組成的。這一類model被稱作推廣的線性模型(generalized linear model)，但跟下一個section的regression不一樣的地方是: `f()`將原本的線性函數轉換為非線性函數。  
 
 > 線性判別函數(linear discriminant function)  
+
 discriminant function透過input將該筆data分類  
 最簡單的形式就是上面見到的`y(x) = w^Tx + w0`，`w`為權重的向量，`w0`為bias。  
 如果將這個公式設為0當作我們的決策平面：若`y(x) >= 0`則分到A類，否則分到B類。那我們假設x1, x2為這個決策平面上的兩個點(兩點相連則為決策平面上的一條向量)，代入公式：  
@@ -225,6 +226,7 @@ w^T(x1 - x2) = 0
 可得  <a href="https://www.codecogs.com/eqnedit.php?latex=r&space;=&space;\frac{y(x)}{|w|}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?r&space;=&space;\frac{y(x)}{|w|}" title="r = \frac{y(x)}{|w|}" /></a>  
 
 > 那我們的discriminant function會怎麼處理multiple class呢？  
+
 這裡先附上一張圖：  
 <img src = "./screenshot/1vrand1v1.png" width = "50%">  
 
