@@ -266,22 +266,38 @@ fisher的思想除了讓mean的投影分得越開，還有讓同樣的class內�
 
 > 透過PLA演算法(Perceptron Learning Algorithm)來分類  
 
+<a href="https://www.codecogs.com/eqnedit.php?latex=y(x)&space;=&space;f(w^T\o&space;(x))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y(x)&space;=&space;f(w^T\o&space;(x))" title="y(x) = f(w^T\o (x))" /></a>. 
+輸入向量會經由非線性轉換得到一個特徵向量：`φ(x)`，然後這個特徵向量將會用來構造一個linear model。其中`f()`作為activation function會輸出離散值：1 or -1。  
+
+> 那麼，如何確定我們的w呢？ perceptron criterion
+
+一樣可以由使誤差函數最小化的思想中得到，一個很直觀的方法便是看misclassification的總數，但這樣會很容易讓我們的誤差函數變得不連續(太難搞啦！)，因此我們再考慮另一個誤差函數唄！有一個誤差函數叫`perceptron criterion(感知機準則)`，這個想法其實很好懂喔: 透過上面的公式，我們已經知道model輸出為1 or -1，我們現在用變量t來取代為一個`{1, -1}`的集合。對於c1類，我們可以得到輸出值大於0，而對於c2類我們可以得到輸出值小於0。這是不是也代表著，只要分類對了：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=w^T\phi&space;(xn)tn&space;>&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w^T\phi&space;(xn)tn&space;>&space;0" title="w^T\phi (xn)tn > 0" /></a>  
+所以如果是誤分類的，我們就要盡量讓誤差越小越好：  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Ep(w)&space;=&space;-\sum_{n->M}^{}w^T\phi&space;(xn)tn" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Ep(w)&space;=&space;-\sum_{n->M}^{}w^T\phi&space;(xn)tn" title="Ep(w) = -\sum_{n->M}^{}w^T\phi (xn)tn" /></a>  
+這便是誤分類的data的誤差總和，`M`即為誤分類的集合。這樣我們也順利的將誤差函數的結果變為線性連續變化的了。下面是林軒田教授在上課講解的簡易`w`更新的公式：  
 ![](./screenshot/PLA1.png)  
-上圖中是我們的classifier  
 `wt + 1`為修正後的權重，`t`則是代表第幾輪  
+更細節的話：  
 
-> 深入探討PLA  
+<a href="https://www.codecogs.com/eqnedit.php?latex=w^{\gamma&plus;1}&space;=&space;w^{\gamma}&space;-&space;\eta&space;\bigtriangledown&space;E_{p}(w)&space;=&space;w^\gamma&space;&plus;&space;\eta&space;\phi&space;_{n}t_{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?w^{\gamma&plus;1}&space;=&space;w^{\gamma}&space;-&space;\eta&space;\bigtriangledown&space;E_{p}(w)&space;=&space;w^\gamma&space;&plus;&space;\eta&space;\phi&space;_{n}t_{n}" title="w^{\gamma+1} = w^{\gamma} - \eta \bigtriangledown E_{p}(w) = w^\gamma + \eta \phi _{n}t_{n}" /></a>  
+其中`η`為learning rate，`τ`為一個整數(代表的是次數，跟上面簡化版的t一樣)，這是一個隨機梯度下降的算法。  
 
-PLA是通過不斷內積來修正錯誤，運用的觀念是任何原點到data point的向量與我們hypothesis線的法向量做內積後：不是`+`就是`-`。
+> 好的，我們來整理一下PLA的整個過程吧
 
-> PLA怎麼停下來？  
+我們不斷計算`y(x)`的值。如果分類正確，那麼`w`不變; 如果分類錯誤，我們會把向量`φ(xn)`加到`w`向量上if屬於c1類，或從中減掉`φ(xn)`if屬於c2類。  
+<img src = "./screenshot/pla_process.png" width = "50%">  
+我已經為大家列上圖片的順序囉！第一張圖的黑色箭頭作為初始的`w`向量，相應的黑色直線則為decision boundary。綠色的點就是我們選的第一個要糾正的點，對於紅色c1類。我們要將他的特徵向量加到我們的`w`上，因次新的decision boundary變動成第二張圖。第三張圖我們再次選了一個誤分類的點，一樣作了變化，整個過程後就能得到正確的decision boundary囉！  
 
-有點複雜又有趣的證明，有空再貼一下  
+> PLA怎麼停下來？ convergence theorem  
+
 每一次修正的`wt+1`都會離目標權重`wf`更近，數學觀念上就是內積越來越大  
 我們可能會懷疑內積越來越大不是因為兩線的夾角變小，而是因為向量的長度變大  
 但通過證明發現，我們的mistake反而限制了我們向量長度的生長，因此長度對內積的影響並不會大到哪裡去  
 而且根據公式，`兩個向量的夾角大於等於次數的根號與一個常數的product`  
-因此T是有上限的!
+因此T是有上限的 **(only if linear separable)**!
 
 > PLA的優點 v.s. 缺點  
 
@@ -334,4 +350,4 @@ Maximum Posterior(MAP approach): Given dataset, 我們通過尋找最有可能�
 ## Refer
 * 林軒田 - 機器學習基石
 * 林軒田 - 機器學習技法
-* PRML
+* Bishop - PRML
