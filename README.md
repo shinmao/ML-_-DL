@@ -458,6 +458,46 @@ gradient descent就算在DL裡面還是微分求導數之類的，本質不會�
 backpropagation（反向傳播）算是一個比較有效的微分計算方式  
 現在大多用tensorflow和pytorch之類的toolkit幫我們計算了  
 
+> backpropagation
+
+在neural network裡面作gradient descent最麻煩的地方在於上百萬個`w`和`b`參數  
+backpropagation是一種比較有效率的gradient descent方法  
+核心是chain rule：  
+<img src="screenshot/chainrule.png" width="50%">  
+還記得我們上面提過的關於NN的loss function嘛？  
+<a href="https://www.codecogs.com/eqnedit.php?latex=L(\theta&space;)&space;=&space;\sum_{n=1}^{N}C^{n}(\theta&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L(\theta&space;)&space;=&space;\sum_{n=1}^{N}C^{n}(\theta&space;)" title="L(\theta ) = \sum_{n=1}^{N}C^{n}(\theta )" /></a>  
+`l^n`便是其中一筆的cross entropy，全部加總便是total loss  
+我們也可以把這個微分放到sigma裡面去，現在我們只focus在一筆data(l)就好  
+<img src="screenshot/bkp.png" width="50%">  
+單筆的loss function對w作偏微分，我們用**forward pass**和**backward pass**來解決計算的麻煩  
+根據chain rule的case 1，我們可以把`loss function對w作的微分`換成`z對w的微分`和`l對z的微分`(看上圖左下)  
+現在分開來計算  
+`z對w的微分`簡直不能再更簡單了  
+微分當然是直取該參數的係數  
+這就叫做foward pass，至於原因等下就會明白了...  
+
+現在來到`l對z的微分`了  
+<img src="screenshot/bkward-pass.png" width="50%">  
+假定經過我們activation function輸出的output為`a`  
+作為下一個neuron的input  
+`a`同樣也會乘上`w3/w4`以及加上某些`b`得到輸出`z'/z"`  
+還記得我們想求`l對z的微分吧`？一樣畫葫蘆：他也可以換成`a對z的微分`和`l對a的微分`  
+`a對z的微分`也就是activation function的微分  
+而`l對a的微分`根據chain rule的case 2可以換成上圖右下角的樣子  
+看看上圖，前面不正是`a`變成output的係數(`w3`, `w4`)嘛  
+接下來來解決最後的問題：`l對z'和z"的微分`該怎麼算呢？  
+<img src="./screenshot/other-perspective.png" width="50%">  
+來個反向思考：把`l對z'和z"的微分`當成input，`w3`和`w4`分別為他們的weight，相加之後經由activation function的微分就可以得到我們想要的`l對z的微分`囉！  
+而這個activation function的微分因為在forward pass裡就已經決定了，在這個**反向的neuron**裡就是個常數  
+
+<img src="./screenshot/bkpp.png" width="50%">  
+從output layer算回去就發現能一路算出`l對z的微分`囉！  
+其實backward pass相當於建造一個新的neural network  
+只是原本的activation function變成了一個常數！  
+
+最後用一張圖再總結一次  
+<img src="./screenshot/bkp-summary.png" width="50%">  
+
 > Why deep?
 
 這裡的問題其實是 why deep? not fat?  
