@@ -319,7 +319,11 @@ fisher的思想除了讓mean的投影分得越開，還有讓同樣的class內�
 
 > 那我們怎麼不直接跑pocket呢？  
 
-當然因為比較慢啊
+當然因為比較慢啊  
+
+> 推薦閱讀  
+
+[線性判別分析](https://ccjou.wordpress.com/2014/03/20/%E7%B7%9A%E6%80%A7%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90/)
 
 ### 用linear classification解釋generative model和discriminative model
 generative model: 生成模型  
@@ -365,6 +369,10 @@ discriminative model: 判別模型
 為什麼discriminative mode常常比generative model還要精準呢？因為generative model很會腦補。基本上他使用的是naive Bayes，代表他假設了所有feature dimension之間都是互相獨立的。所以他很容易忽略feature之間的correlation。在這方面。discriminative model則非常老實的看data說話。不過generative model在兩個情況下派得上用場：1. training sample很少時，我們需要自己腦補一些假設，2. dataset很多noise時，看data說話很容易被誤導。  
 
 > 不過logistic regression有很大的限制性。data非linear separable時我們可以進行feature transformation。這甚至還跟後來的neural network息息相關...
+
+> 推薦閱讀
+
+[邏輯斯回歸](https://ccjou.wordpress.com/2014/03/26/%E9%82%8F%E8%BC%AF%E6%96%AF%E5%9B%9E%E6%AD%B8/)
 
 ## linear regression
 先來上個linear regression用的model  
