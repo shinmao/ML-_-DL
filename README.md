@@ -2,7 +2,7 @@
 - [ML-_-DL](#ml-_-dl)
   - [ML](#ml)
   - [ML數學概率基礎](#ml數學概率基礎)
-  - [Curse of Dimensionality](#curse-of-dimensionality)
+  - [維度](#維度)
   - [學習方法：](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
   - [validation](#validation)
@@ -123,11 +123,9 @@ Decision step: 從x推斷Ck讓error最小化
 
 -> 還有一種是找到一種function能直接將input map到class label的。這就跟probability八竿子打不著了。
 
-## Curse of Dimensionality
-真實世界中，為了完美得分類，我們需要取很多樣的特徵。然而，分類器的效能在過了最適當的特徵數後，是會隨特徵數(也就維
-度)下降的！  
-為什麼呢？實際上dataset是由低維空間所產生的，投射到高維之後點跟點之間的距離會變長，假設我們打算用點跟點之間的距離來作區分(就像knn)，那這就麻煩了...因為單位空間內的樣本數量變少了。也就是說隨著維度提高，所需的樣本數會以指數上升(哇咧，甚至到最後可能覆蓋了整個樣本空間，這樣我們的model怎麼可能會work呀。  
-換句話說，距離度量型的model在越高維的空間中就越派不上用場。還好PRML安慰我們說，這並不會阻止我們尋找高維空間中的分類：高維數據中常常存在冗餘的部分，因此後面出現了降維的方法！
+## 維度
+* 維度災難 (Curse of dimensionality)
+* PLA 降維
 
 ## 學習方法：
 | 方法        | 有沒有label | 描述  |
