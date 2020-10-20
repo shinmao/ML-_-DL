@@ -124,8 +124,8 @@ Decision step: 從x推斷Ck讓error最小化
 -> 還有一種是找到一種function能直接將input map到class label的。這就跟probability八竿子打不著了。
 
 ## 維度
-* 維度災難 (Curse of dimensionality)
-* PLA 降維
+* [維度災難 (Curse of dimensionality)](./dimension.md#維度災難)
+* [PLA 降維](./dimension.md#pca-principal-component-analysis)
 
 ## 學習方法：
 | 方法        | 有沒有label | 描述  |
