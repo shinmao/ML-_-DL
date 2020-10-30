@@ -9,7 +9,6 @@
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
     - [用linear classification解釋generative model和discriminative model](#用linear-classification解釋generative-model和discriminative-model)
-  - [linear regression](#linear-regression)
   - [DL](#dl)
   - [Refer](#refer)
 
@@ -334,74 +333,11 @@ discriminative model: 判別模型
 * 聯合分配(joint distribution)：特徵向量與目標變數的分配`P(X, Y)`，也是我們一般最常蒐集到的training data
 * 後驗分配(posterior distribution)：目標函數在特徵向量given時的分配`P(Y|X): y -> [0, 1]`
 
-判別模型是透過在大量資料上估計posterior distribution的學習方法。生成模型則是估計joint distrubution`P(X, Y)`，再透過貝氏定理得出`P(X|Y)`。  
-
-生成模型  
-假設我們拿到一個x，我們想知道他屬於class 1還是class 2，就由`p(C1|x) v.s. p(C2|x)`來決勝負唄  
-<a href="https://www.codecogs.com/eqnedit.php?latex=p(C1|x)&space;=&space;\frac{p(C1)p(x|C1)}{p(C1)p(x|C1)&space;&plus;&space;p(C2)p(x|C2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(C1|x)&space;=&space;\frac{p(C1)p(x|C1)}{p(C1)p(x|C1)&space;&plus;&space;p(C2)p(x|C2)}" title="p(C1|x) = \frac{p(C1)p(x|C1)}{p(C1)p(x|C1) + p(C2)p(x|C2)}" /></a>  
-換句話說：`p(x) = p(x|C1)p(C1) + p(x|C2)p(C2)`，為何這叫作生成模型就是因為我們可以拿這個model去生成一個x。由上面推導可知我們要計算出答案還需要`p(Ci)`和`p(x|Ci)`。`p(Ci)`還很簡單，我們當然知道dataset中clss的比重。但怎麼得到`p(x|Ci)`呢？重點是我們想生成x，代表x還未存在於dataset中，我們總不能說`p(x|Ci) = 0`吧 = =  
-這裡我們要應用到高斯分佈。其實已有的training sample也都是feature vector所構成的而已。所以我們可以找到那個產生sample的高斯分佈，並且生成這個未知x的機率也不會是0！  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\[&space;f(x)=\frac&space;1{\sqrt{2\pi&space;}\sigma&space;}\exp&space;\left\{&space;-\frac&space;12\left(&space;\frac{x-\mu&space;}%&space;\sigma&space;\right)&space;^2\right\}&space;\]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\[&space;f(x)=\frac&space;1{\sqrt{2\pi&space;}\sigma&space;}\exp&space;\left\{&space;-\frac&space;12\left(&space;\frac{x-\mu&space;}%&space;\sigma&space;\right)&space;^2\right\}&space;\]" title="\[ f(x)=\frac 1{\sqrt{2\pi }\sigma }\exp \left\{ -\frac 12\left( \frac{x-\mu }% \sigma \right) ^2\right\} \]" /></a>  
-這是高斯分佈的機率密度函數，`miu`代表平均值會影響到機率分佈的最高點，`sigma`代表方差會影響到機率分佈的密度，所以我們只要找到這兩個參數即可。方法便是將用maximum likelihood: 將所有sample點代入機率密度函數找最大值，各別`miu`和`sigma`的偏微分 = 0便能得到我們高斯函數的最終參數！這樣一樣，我們也拿到`p(x|Ci)`囉！  
-![](screenshot/classify-with-generative-model.png)  
-
-> 其實不同的class可以share同一個covariance matrix。畢竟參數如果太多很容易overfitting，所以我們可以強迫兩個class的gaussian function使用同樣的covariance參數。其實新的covariance參數求法也非常直觀，假設原本是sigma1和sigma2，新sigma = p(C1)*sigma1 + p(C2)*sigma2
-
-> 為什麼要用guassian distribution呢？誰說的，當然可以自己選啊。如果選參數較少的distribution function，bias較大/variance較小，反之則bias較小/variance較大
-
-上面的generative model其實可以得到**驚人**的結論。我們現在可以計算出`p(C1|x)`的值了對吧，經過複查布拉布拉布拉的計算 + 共用同一個sigma，我們可以得出最後的:  
-![](screenshot/generative%20result.png)  
-我們先看右邊的第二條紅線，完全沒有x的變數，代表他其實就是個scalar，那麼我們可以認為他是常數，用一個`b`來做替換。而前面的`miu1 - miu2`我們用w這個vector來作替換。咦？是不是很眼熟？沒錯，這就是我們的`w^T + b`囉！這也能解釋為什麼我們將sigma共用之後得到的decision boundary會是linear的。  
-上面這件事稱作logistic regression，這邊比較一下logistic regression和linear regression:  
-![](screenshot/logisticvslinear.png)  
-先比較function，logistic regression經由sigmoid function會壓縮到0, 1之間，而linear regression會輸出任意值。綠色框框的部分是我們評估logistic funcion的方法，一樣取個自然對數 + 負值，我們的目標就是使這個`L(w)`最小。用gradient descent對w取偏微分，可以得到:  
-<a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{n&space;=&space;1}^{N}(y_{n}&space;-&space;t_{n})X_{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{n&space;=&space;1}^{N}(y_{n}&space;-&space;t_{n})X_{n}" title="\sum_{n = 1}^{N}(y_{n} - t_{n})X_{n}" /></a>  
-這是不是也很熟悉呀？沒錯，這也是w的梯度，會隨著輸出值與目標值的差距調整梯度。  
-
-現在回到generative model v.s. discriminative model  
-他們兩個的目標函數是一樣的：  
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=p(Ci|x)&space;=&space;\sigma&space;(wx&space;&plus;&space;b)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(Ci|x)&space;=&space;\sigma&space;(wx&space;&plus;&space;b)" title="p(Ci|x) = \sigma (wx + b)" /></a>  
-**兩個都需要找出w和b**。generative model需要找出c1的平均值，c2的平均值，和兩個共用的covariance，進一步算出w和b。而discriminative model則直接找出w和b(方法就是上面的cross entropy取gradient descent)。但兩個找出的參數會有所不同，因為假設的不一樣，e.g. generative model中我們就假設了guassian distribution。**通常discriminative model找出的會比generative model還要精準！**  
-
-為什麼discriminative mode常常比generative model還要精準呢？因為generative model很會腦補。基本上他使用的是naive Bayes，代表他假設了所有feature dimension之間都是互相獨立的。所以他很容易忽略feature之間的correlation。在這方面。discriminative model則非常老實的看data說話。不過generative model在兩個情況下派得上用場：1. training sample很少時，我們需要自己腦補一些假設，2. dataset很多noise時，看data說話很容易被誤導。  
-
-> 不過logistic regression有很大的限制性。data非linear separable時我們可以進行feature transformation。這甚至還跟後來的neural network息息相關...
-
-> 推薦閱讀
-
-[邏輯斯回歸](https://ccjou.wordpress.com/2014/03/26/%E9%82%8F%E8%BC%AF%E6%96%AF%E5%9B%9E%E6%AD%B8/)
-
-## linear regression
-先來上個linear regression用的model  
-<a href="https://www.codecogs.com/eqnedit.php?latex=y(x,&space;w)&space;=&space;w0&space;&plus;&space;w1x&space;&plus;&space;w2x^2&space;&plus;&space;w3x^3&space;&plus;&space;...&space;wMx^M&space;=&space;\sum_{j=0}^{M}wjx^j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y(x,&space;w)&space;=&space;w0&space;&plus;&space;w1x&space;&plus;&space;w2x^2&space;&plus;&space;w3x^3&space;&plus;&space;...&space;wMx^M&space;=&space;\sum_{j=0}^{M}wjx^j" title="y(x, w) = w0 + w1x + w2x^2 + w3x^3 + ... wMx^M = \sum_{j=0}^{M}wjx^j" /></a>  
-講到regression，我們最常用的就是polynomial curve fitting！  
-等等，為什麼我要用polynomial fitting呢？這跟taylor展開式有關。任意一個函數可以表示成x的次方和，也就是可以放到(1, x, x^2, x^3,...)所張開的空間。  
-
-假設我們想要擬和一個sin的週期函數，怎麼樣的曲線函數(polynomial curve fitting)會最接近呢？我們可以用root-mean-square error來評估這個效果。  
-下面則是方差，我們的函數值是`y(...)`。在regression中我們的目標是讓方差和最小化  
-<a href="https://www.codecogs.com/eqnedit.php?latex=E(w)&space;=&space;\frac{1}{2}\sum_{n=1}^{N}\left&space;\{&space;y(Xn,&space;w)&space;-&space;tn&space;\right&space;\}^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E(w)&space;=&space;\frac{1}{2}\sum_{n=1}^{N}\left&space;\{&space;y(Xn,&space;w)&space;-&space;tn&space;\right&space;\}^2" title="E(w) = \frac{1}{2}\sum_{n=1}^{N}\left \{ y(Xn, w) - tn \right \}^2" /></a>  
-
-當數據量不夠時，也可以用regularization避開overfit的問題  
-<a href="https://www.codecogs.com/eqnedit.php?latex=E(w)&space;=&space;\frac{1}{2}\sum_{n=1}^{N}\left&space;\{&space;y(Xn,&space;w)&space;-&space;tn&space;\right&space;\}^2&space;&plus;&space;\frac{}{2}\left&space;\|&space;w&space;\right&space;\|^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E(w)&space;=&space;\frac{1}{2}\sum_{n=1}^{N}\left&space;\{&space;y(Xn,&space;w)&space;-&space;tn&space;\right&space;\}^2&space;&plus;&space;\frac{l}{2}\left&space;\|&space;w&space;\right&space;\|^2" title="E(w) = \frac{1}{2}\sum_{n=1}^{N}\left \{ y(Xn, w) - tn \right \}^2 + \frac{}{2}\left \| w \right \|^2" /></a>  
-> 這邊小小介紹一下regularization幹了什麼好事？上面公式中l會控制model的複雜程度，也就是間接決定overfit的程度
-
-看完上面的[ml數學概率基礎](##ml數學概率基礎)，我們可以來重新審視polynomial curve overfitting的問題。  
-這裡有N個輸入組成的dataset：`(x1, x2, ... xN)^T`  
-和目標值組成的dataset：`(t1, t2, ... tN)^T`  
-我們可以用概率分佈來表示目標值的不確定性：  
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=p(t&space;|&space;x,&space;w,&space;\beta&space;)=&space;N(t&space;|&space;y(x,&space;w,&space;\beta^{-1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(t&space;|&space;x,&space;w,&space;\beta&space;)=&space;N(t&space;|&space;y(x,&space;w,&space;\beta^{-1}))" title="p(t | x, w, \beta )= N(t | y(x, w, \beta^{-1}))" /></a>  
-我們現在通過訓練這組dataset來決定`w`和`β`的值，假設是從上面的分佈取得的，那我們可以得到:  
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=p(t&space;|&space;x,&space;w,&space;\beta&space;)=&space;\prod_{n=1}^{N}N(t&space;|&space;y(x,&space;w,&space;\beta^{-1}))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p(t&space;|&space;x,&space;w,&space;\beta&space;)=&space;\prod_{n=1}^{N}N(t&space;|&space;y(x,&space;w,&space;\beta^{-1}))" title="p(t | x, w, \beta )= \prod_{n=1}^{N}N(t | y(x, w, \beta^{-1}))" /></a>  
-來吧再一次！maximum log-likelihood function，但這次我們等價得最小化square error function。到這裡我們已經有`wML`和`βML`的答案了。代入上面的概率分佈公式，我們可以預測x囉。  
-
-Maximum Posterior(MAP approach): Given dataset, 我們通過尋找最有可能的`w`(也就是我們的max posterior)來確定`w`。這等同於最小化正則化的square error function。
+[Generative model v.s. Discriminative model](./Gen-Model-and-Dis-Model/README.md)
 
 ## DL
 * 什麼是Nueral Network?
-* BP (Back Propagation)
+* [BP (Back Propagation)](back-propagation/README.md)
 
 ## Refer
 * 林軒田 - 機器學習基石
