@@ -9,6 +9,7 @@
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
     - [用linear classification解釋generative model和discriminative model](#用linear-classification解釋generative-model和discriminative-model)
+    - [SVM](#svm)
   - [DL](#dl)
   - [Refer](#refer)
 
@@ -334,6 +335,10 @@ discriminative model: 判別模型
 * 後驗分配(posterior distribution)：目標函數在特徵向量given時的分配`P(Y|X): y -> [0, 1]`
 
 [Generative model v.s. Discriminative model](./Gen-Model-and-Dis-Model/README.md)
+
+### SVM
+* [先從kernel trick是啥講起](./SVM/README.md)
+* [SVM入場](./SVM/README.md)
 
 ## DL
 * 什麼是Nueral Network?
