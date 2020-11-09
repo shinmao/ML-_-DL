@@ -8,6 +8,8 @@
 我們常用4-fold cross validation，每一次都用3/4的資料來train。  
 缺點便是我們執行的次數隨著k上升  
 * ...
+
+
 Which model to use (selection problem)
 How to choose model from many models?  
 	The best Eout
