@@ -25,7 +25,7 @@ If we do not know the best Eout how about choose the best Ein
 Ein <- Probability that H(n) and yn are not equal
 
 ### What can we do? 
-<img src="../screenshot/validation 1.png" width="100%">
+<img src="../screenshot/validation 1.png">
 
  
 1. Choose the best feature
