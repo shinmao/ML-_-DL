@@ -91,7 +91,7 @@ We can observe that blue line performed better that red and in-sample line.
 
 But why the red line is worse than in_sample line?
 
-Because the Gm- use the less data eventually.
+Because the <a href="https://www.codecogs.com/eqnedit.php?latex=g_{m}^{-}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{m}^{-}" title="g_{m}^{-}" /></a> use the less data eventually.
 
 ### The dilemma of K
   <img src="../screenshot/validation 6.png"  width="80%">
@@ -137,7 +137,7 @@ V-fold cross-validation: Random-Partition D to V equal parts and taking V-1 for 
  
 In practice, V =10
 
-But be careful…
+### Careful…
 
 
 <img src="../screenshot/validation 11.png"  width="60%">
