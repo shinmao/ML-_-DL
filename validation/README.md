@@ -20,10 +20,10 @@
 * Fact: We do not know the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>!!
 
 ### How? Visually? CAUSE NOT!!
-If we do not know the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a> how about choose the best Ein
+If we do not know the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a> how about choose the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a>
 <img src="../screenshot/validation 1.png">
 
-Ein <- Probability that H(n) and yn are not equal
+<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> <- Probability that H(n) and yn are not equal
 
 ### What can we do? 
  
@@ -37,9 +37,9 @@ Ein <- Probability that H(n) and yn are not equal
 
 2.	Compare models
 
-	A1 minimizes Ein over H1
+	A1 minimizes <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> over H1
 
-	A2 minimizes Ein over H2
+	A2 minimizes <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> over H2
 
 	VC Dimension = c(H1∪H2) <- INCREASE MODEL COMPACITY
 
@@ -57,7 +57,7 @@ According finite-bin Hoeffding.
 Yes! We can get the best one But where is the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{test}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{test}" title="E_{test}" /></a>?
  
 ### Compare the method we already talk
-1. Ein
+1. <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a>
 * Calculated from dataset
 * Feasible on hand
 * Us the dataset that already used by Am
@@ -119,14 +119,14 @@ Is that means anything?
 
   <img src="../screenshot/validation 7.png"  width="60%">
 
-## Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" title="E_{loocv}(H,A) \approx E_{out}(g)" /></a> and here we are
+## Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" title="E_{loocv}(H,A) \approx E_{out}(g)" /></a> and here we are~~
 
 ### Leave-One-Out Cross Validation in Practice
 
   <img src="../screenshot/validation 8.png"  width="60%">
    <img src="../screenshot/validation 9.png"  width="50%">
 
-We can observe that Eloocv performs better than Ein and close to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>.
+We can observe that Eloocv performs better than <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> and close to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>.
 
 ### But… 
 If our N is 10,000?? We must do 10,000 times computation.
