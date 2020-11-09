@@ -138,4 +138,6 @@ V-fold cross-validation: Random-Partition D to V equal parts and taking V-1 for 
 In practice, V =10
 
 But be careful…
+
+
 <img src="../screenshot/validation 11.png"  width="60%">
