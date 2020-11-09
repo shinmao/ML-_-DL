@@ -25,6 +25,7 @@ If we do not know the best Eout how about choose the best Ein
 Ein <- Probability that H(n) and yn are not equal
 
 ### What can we do? 
+<img src="./screenshot/validation 1.png">
  
 1. Choose the best feature
 
@@ -61,18 +62,17 @@ Ein <- Probability that H(n) and yn are not equal
 * Infeasible
 * Clean!! But nowhere to get the Etest
 
-3. A NEW WAY~ <= Eval
+3. A NEW WAY~ <= E validation
 * Calculated from Dval
 * Feasible on hand
 * Clean!!
 
 Validation Set Dval
-	 
 	Select K examples from D at random
 Generalization guarantee for all M:
 Eout(gm-)≤Etest(gm-)+O(√(log⁡M/Ntest)) 
 	 
-	After getting the best gm- we can use the hold dataset to get the best gm.
+	After getting the best gm- we can use the whole dataset to get the best gm.
  
 Does that work? 
  
