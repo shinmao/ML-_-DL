@@ -12,11 +12,11 @@
 
 ## Which model to use (selection problem)
 How to choose model from many models?  
-*The best Eout
+* The best Eout
 Model selection (Goal)
-*Give: M models with H1, H2, H3… Hm with A1, A2, A3… Am. 
-*Get: Select Hm that Gm=Am is the lowest Eout (The best model!!!)
-*Fact: We do not know the best Eout!!
+* Give: M models with H1, H2, H3… Hm with A1, A2, A3… Am. 
+* Get: Select Hm that Gm=Am is the lowest Eout (The best model!!!)
+* Fact: We do not know the best Eout!!
 How? Visually? CAUSE NOT!!
 If we do not know the best Eout how about choose the best Ein
 	Ein <- Probability that H(n) and yn are not equal
