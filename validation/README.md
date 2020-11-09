@@ -12,15 +12,15 @@
 
 # Which model to use (selection problem)
 ## How to choose model from many models?  
-* The best Eout
+* The best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>
 
 ### Model selection (Goal)
 * Give: M models with H1, H2, H3… Hm with A1, A2, A3… Am. 
-* Get: Select Hm that Gm=Am is the lowest Eout (The best model!!!)
-* Fact: We do not know the best Eout!!
+* Get: Select Hm that Gm=Am is the lowest <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a> (The best model!!!)
+* Fact: We do not know the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>!!
 
 ### How? Visually? CAUSE NOT!!
-If we do not know the best Eout how about choose the best Ein
+If we do not know the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a> how about choose the best Ein
 <img src="../screenshot/validation 1.png">
 
 Ein <- Probability that H(n) and yn are not equal
@@ -29,7 +29,7 @@ Ein <- Probability that H(n) and yn are not equal
  
 1. Choose the best feature
 
-	Feature 1126 always better than Feature 1 .right~
+	Feature 1126 always better than Feature 1
 
 	λ= 0 is always better than λ= 0.1 
 	
@@ -45,7 +45,7 @@ Ein <- Probability that H(n) and yn are not equal
 
 		Use Ein is dangerous!!!  Ein IS BAD!!
  
-### How about select by the best Etest?
+### How about select by the best <a href="https://www.codecogs.com/eqnedit.php?latex=E_{test}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{test}" title="E_{test}" /></a>?
 <img src="../screenshot/validation 2.png" width="40%">
 
 What can you get from this method?
@@ -54,17 +54,17 @@ According finite-bin Hoeffding.
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Eout(g_{m}^{*})\leq&space;Etest(g_{m}^{*})&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(g_{m}^{*})\leq&space;Etest(g_{m}^{*})&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(g_{m}^{*})\leq Etest(g_{m}^{*})+O(\sqrt{\frac{logM}{Ntest}})" /></a>
 
-Yes! We can get the best one But where is the Etest?
+Yes! We can get the best one But where is the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{test}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{test}" title="E_{test}" /></a>?
  
 ### Compare the method we already talk
 1. Ein
 * Calculated from dataset
 * Feasible on hand
 * Us the dataset that already used by Am
-2. Etest 
+2. <a href="https://www.codecogs.com/eqnedit.php?latex=E_{test}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{test}" title="E_{test}" /></a> 
 * Calculated from test data
 * Infeasible
-* Clean!! But nowhere to get the Etest
+* Clean!! But nowhere to get the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{test}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{test}" title="E_{test}" /></a>
 
 3. A NEW WAY => E validation
 * Calculated from Dval
@@ -126,7 +126,7 @@ Is that means anything?
   <img src="../screenshot/validation 8.png"  width="60%">
    <img src="../screenshot/validation 9.png"  width="50%">
 
-We can observe that Eloocv performs better than Ein and close to Eout.
+We can observe that Eloocv performs better than Ein and close to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>.
 
 ### But… 
 If our N is 10,000?? We must do 10,000 times computation.
