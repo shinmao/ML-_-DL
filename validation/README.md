@@ -73,14 +73,14 @@ Yes! We can get the best one But where is the Etest?
 
 ### Validation Set Dval
 
-<img src="../screenshot/validation 3.png"  width="80%">
+<img src="../screenshot/validation 3.png"  width="70%">
 
 Select K examples from D at random
 Generalization guarantee for all M:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Eout(g_{m}^{-})\leq&space;Etest(g_{m}^{-})&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(g_{m}^{-})\leq&space;Etest(g_{m}^{-})&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(g_{m}^{-})\leq Etest(g_{m}^{-})+O(\sqrt{\frac{logM}{Ntest}})" /></a>
 
-<img src="../screenshot/validation 4.png"  width="50%">
+<img src="../screenshot/validation 4.png"  width="60%">
 	 
 ##	After getting the best gm- we can use the whole dataset to get the best gm.
  
