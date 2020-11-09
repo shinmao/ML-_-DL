@@ -82,7 +82,7 @@ Generalization guarantee for all M:
 
 <img src="../screenshot/validation 4.png">
 	 
-#	After getting the best gm- we can use the whole dataset to get the best gm.
+##	After getting the best gm- we can use the whole dataset to get the best gm.
  
 ### Does that work?
  <img src="../screenshot/validation 5.png" width="70%">
@@ -95,16 +95,29 @@ But why the red line is worse than in_sample line?
   <img src="../screenshot/validation 6.png">
 
 Large K:
-	Make Eval closer to Eout(g-), but the Eout(g-) is far from Eout(gm)
+
+Make Eval closer to Eout(g-), but the Eout(g-) is far from Eout(gm)
+
 Small K
 	Make Eout(g) closer to Eout(g-), but the Eout(g-) is far from Eval.
-In practice:　K=N/5
-Extreme Cass: What if K =1?
-	Take K=1, D_val^((n))= {(Xn,Yn)} and E_val^((n))(gn-)=err(gn-(Xn),Yn) = En
-	Average over possible E_val^((n))<= leave-one-out cross validation
-	E_loocv (H,A)=  1/N ∑_(n=1)^N▒En . Is that means anything?
+	
+
+	In practice:　K=N/5
+
+### Extreme Cass: What if K =1?
+
+
+Take K=1, <a href="https://www.codecogs.com/eqnedit.php?latex=D_{val}^{(n)}&space;=&space;{(Xn,Yn)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{val}^{(n)}&space;=&space;{(Xn,Yn)}" title="D_{val}^{(n)} = {(Xn,Yn)}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}^{(n)}g_{n}^{-}&space;=&space;err(g_{n}^{-}(Xn),Yn)=&space;e_{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{val}^{(n)}g_{n}^{-}&space;=&space;err(g_{n}^{-}(Xn),Yn)=&space;e_{n}" title="E_{val}^{(n)}g_{n}^{-} = err(g_{n}^{-}(Xn),Yn)= e_{n}" /></a>
+
+Average over possible<a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}^{(n)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{val}^{(n)}" title="E_{val}^{(n)}" /></a><= leave-one-out cross validation
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;=&space;\frac{1}{N}\sum_{n=1}^{N}e_{n}&space;=&space;\frac{1}{N}\sum_{n=1}^{N}err(g_{n}^{-}(X_{n}),Y_{n})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;=&space;\frac{1}{N}\sum_{n=1}^{N}e_{n}&space;=&space;\frac{1}{N}\sum_{n=1}^{N}err(g_{n}^{-}(X_{n}),Y_{n})" title="E_{loocv}(H,A) = \frac{1}{N}\sum_{n=1}^{N}e_{n} = \frac{1}{N}\sum_{n=1}^{N}err(g_{n}^{-}(X_{n}),Y_{n})" /></a> 
+
+Is that means anything?
+
+  <img src="../screenshot/validation 7.png">
   
-Leave-One-Out Cross Validation in Practice
+### Leave-One-Out Cross Validation in Practice
  
    
 
