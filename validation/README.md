@@ -116,8 +116,15 @@ Average over possible<a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}
 Is that means anything?
 
   <img src="../screenshot/validation 7.png"  width="60%">
-  
+
+Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" title="E_{loocv}(H,A) \approx E_{out}(g)" /></a> and here we are
+
 ### Leave-One-Out Cross Validation in Practice
+
+  <img src="../screenshot/validation 8.png"  width="60%">
+   <img src="../screenshot/validation 9.png"  width="50%">
+
+We can observe that 
  
    
 
