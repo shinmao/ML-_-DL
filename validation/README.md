@@ -124,14 +124,19 @@ Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loo
   <img src="../screenshot/validation 8.png"  width="60%">
    <img src="../screenshot/validation 9.png"  width="50%">
 
-We can observe that 
- 
-   
+We can observe that Eloocv performs better than Ein and close to Eout.
 
-But… If our N is 10,000?? We must do 10,000 times computation.
-	V-fold cross-validation: 
-Random-Partition D to V equal parts and taking V-1 for training and 1 for validation.
+### But… 
+If our N is 10,000?? We must do 10,000 times computation.
+
+V-fold cross-validation: Random-Partition D to V equal parts and taking V-1 for training and 1 for validation.
+
+<img src="../screenshot/validation 10.png"  width="60%">
+	
+
+
  
 In practice, V =10
+
 But be careful…
- 
+<img src="../screenshot/validation 11.png"  width="60%">
