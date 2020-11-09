@@ -82,7 +82,7 @@ Generalization guarantee for all M:
 
 <img src="../screenshot/validation 4.png"  width="60%">
 	 
-##	After getting the best gm- we can use the whole dataset to get the best gm.
+After getting the best <a href="https://www.codecogs.com/eqnedit.php?latex=g_{m}^{-}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{m}^{-}" title="g_{m}^{-}" /></a> we can use the whole dataset to get the best <a href="https://www.codecogs.com/eqnedit.php?latex=g_{m}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?g_{m}" title="g_{m}" /></a>.
  
 ### Does that work?
  <img src="../screenshot/validation 5.png" width="40%">
@@ -117,7 +117,7 @@ Is that means anything?
 
   <img src="../screenshot/validation 7.png"  width="60%">
 
-Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" title="E_{loocv}(H,A) \approx E_{out}(g)" /></a> and here we are
+## Our goal is to make  	<a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}(H,A)&space;\approx&space;E_{out}(g)" title="E_{loocv}(H,A) \approx E_{out}(g)" /></a> and here we are
 
 ### Leave-One-Out Cross Validation in Practice
 
