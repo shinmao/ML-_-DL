@@ -51,15 +51,15 @@ Ein <- Probability that H(n) and yn are not equal
 		Eout(gm*)≤Etest(gm*)+O(√(log⁡M/Ntest))
 		Yes! We can get the best one But where is the Etest?
  
-Compare the method we already talk
-	Ein
-	Calculated from dataset
-	Feasible on hand
-	Us the dataset that already used by Am
-	Etest 
-	Calculated from test data
-	Infeasible
-	Clean!! But nowhere to get the Etest
+### Compare the method we already talk
+1. Ein
+* Calculated from dataset
+* Feasible on hand
+* Us the dataset that already used by Am
+2. Etest 
+* Calculated from test data
+* Infeasible
+* Clean!! But nowhere to get the Etest
 
 A NEW WAY~ <= Eval
 	Calculated from Dval
