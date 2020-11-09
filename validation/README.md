@@ -10,7 +10,7 @@
 * ...
 
 
-###Which model to use (selection problem)
+## Which model to use (selection problem)
 How to choose model from many models?  
 *The best Eout
 Model selection (Goal)
