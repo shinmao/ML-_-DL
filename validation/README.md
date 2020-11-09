@@ -46,7 +46,7 @@ Ein <- Probability that H(n) and yn are not equal
 		Use Ein is dangerous!!!  Ein IS BAD!!
  
 ### How about select by the best Etest?
-<img src="../screenshot/validation 2.png" width="50%">
+<img src="../screenshot/validation 2.png" width="40%">
 
 What can you get from this method?
 
@@ -73,7 +73,7 @@ Yes! We can get the best one But where is the Etest?
 
 ### Validation Set Dval
 
-<img src="../screenshot/validation 3.png">
+<img src="../screenshot/validation 3.png"  width="40%">
 
 Select K examples from D at random
 Generalization guarantee for all M:
@@ -85,14 +85,14 @@ Generalization guarantee for all M:
 ##	After getting the best gm- we can use the whole dataset to get the best gm.
  
 ### Does that work?
- <img src="../screenshot/validation 5.png" width="70%">
+ <img src="../screenshot/validation 5.png" width="40%">
  
 We can observe that blue line performed better that red and in-sample line.
 But why the red line is worse than in_sample line?
 	Because the Gm- use the less data eventually.
 
 ### The dilemma of K
-  <img src="../screenshot/validation 6.png">
+  <img src="../screenshot/validation 6.png"  width="40%">
 
 Large K:
 
@@ -115,7 +115,7 @@ Average over possible<a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}
 
 Is that means anything?
 
-  <img src="../screenshot/validation 7.png">
+  <img src="../screenshot/validation 7.png"  width="40%">
   
 ### Leave-One-Out Cross Validation in Practice
  
