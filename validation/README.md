@@ -66,7 +66,7 @@ Yes! We can get the best one But where is the Etest?
 * Infeasible
 * Clean!! But nowhere to get the Etest
 
-3. A NEW WAY~ <= E validation
+3. A NEW WAY => E validation
 * Calculated from Dval
 * Feasible on hand
 * Clean!!
@@ -82,7 +82,7 @@ Generalization guarantee for all M:
 
 <img src="../screenshot/validation 4.png">
 	 
-	After getting the best gm- we can use the whole dataset to get the best gm.
+#	After getting the best gm- we can use the whole dataset to get the best gm.
  
 ### Does that work?
  <img src="../screenshot/validation 5.png" width="70%">
@@ -91,8 +91,9 @@ We can observe that blue line performed better that red and in-sample line.
 But why the red line is worse than in_sample line?
 	Because the Gm- use the less data eventually.
 
-The dilemma of K
- 
+### The dilemma of K
+  <img src="../screenshot/validation 6.png">
+
 Large K:
 	Make Eval closer to Eout(g-), but the Eout(g-) is far from Eout(gm)
 Small K
