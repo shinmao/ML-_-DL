@@ -126,7 +126,7 @@ Is that means anything?
   <img src="../screenshot/validation 8.png"  width="60%">
    <img src="../screenshot/validation 9.png"  width="50%">
 
-We can observe that Eloocv performs better than <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> and close to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>.
+We can observe that <a href="https://www.codecogs.com/eqnedit.php?latex=E_{loocv}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{loocv}" title="E_{loocv}" /></a> performs better than <a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}" title="E_{in}" /></a> and close to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}" title="E_{out}" /></a>.
 
 ### But… 
 If our N is 10,000?? We must do 10,000 times computation.
