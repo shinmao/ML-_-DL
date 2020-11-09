@@ -98,11 +98,11 @@ Because the Gm- use the less data eventually.
 
 Large K:
 
-Make Eval closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{m})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{m})" title="E_{out}(g^{m})" /></a>
+Make <a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{val}(g^{-})" title="E_{val}(g^{-})" /></a> closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{m})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g)" title="E_{out}(g)" /></a>
 
 Small K:
 
-Make Eout(g) closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from Eval.
+Make <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g)" title="E_{out}(g)" /></a> closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from <a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{val}(g^{-})" title="E_{val}(g^{-})" /></a>.
 	
 
 ### 	 In practice:	<a href="https://www.codecogs.com/eqnedit.php?latex=K=\frac{N}{5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K=\frac{N}{5}" title="K=\frac{N}{5}" /></a>
