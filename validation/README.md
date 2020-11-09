@@ -10,28 +10,41 @@
 * ...
 
 
-## Which model to use (selection problem)
-How to choose model from many models?  
+# Which model to use (selection problem)
+## How to choose model from many models?  
 * The best Eout
-Model selection (Goal)
+
+### Model selection (Goal)
 * Give: M models with H1, H2, H3… Hm with A1, A2, A3… Am. 
 * Get: Select Hm that Gm=Am is the lowest Eout (The best model!!!)
 * Fact: We do not know the best Eout!!
-How? Visually? CAUSE NOT!!
+
+### How? Visually? CAUSE NOT!!
 If we do not know the best Eout how about choose the best Ein
-	Ein <- Probability that H(n) and yn are not equal
-What can we do? 
+
+Ein <- Probability that H(n) and yn are not equal
+
+### What can we do? 
  
+1. Choose the best feature
+
+	Feature 1126 always better than Feature 1 .right~
+
+	λ= 0 is always better than λ= 0.1 
 	
-Feature 1126 always better than Feature 1 
-λ= 0 is always better than λ= 0.1 => OVERFITTING!!
-	Compare models
-A1 minimizes Ein over H1
-A2 minimizes Ein over H2
-VC Dimension = c(H1∪H2) <- INCREASE MODEL COMPACITY
-	Use Ein is dangerous!!!  Ein IS BAD!!
+		=> OVERFITTING!!
+
+2.	Compare models
+
+	A1 minimizes Ein over H1
+
+	A2 minimizes Ein over H2
+
+	VC Dimension = c(H1∪H2) <- INCREASE MODEL COMPACITY
+
+		Use Ein is dangerous!!!  Ein IS BAD!!
  
-How about select by the best Etest?
+### How about select by the best Etest?
 	 
   	What can you get from this method?
 		According finite-bin Hoeffding. 
