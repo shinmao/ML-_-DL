@@ -21,12 +21,11 @@
 
 ### How? Visually? CAUSE NOT!!
 If we do not know the best Eout how about choose the best Ein
+<img src="../screenshot/validation 1.png">
 
 Ein <- Probability that H(n) and yn are not equal
 
 ### What can we do? 
-<img src="../screenshot/validation 1.png">
-
  
 1. Choose the best feature
 
@@ -47,11 +46,15 @@ Ein <- Probability that H(n) and yn are not equal
 		Use Ein is dangerous!!!  Ein IS BAD!!
  
 ### How about select by the best Etest?
-	 
-  	What can you get from this method?
-		According finite-bin Hoeffding. 
-		Eout(gm*)≤Etest(gm*)+O(√(log⁡M/Ntest))
-		Yes! We can get the best one But where is the Etest?
+<img src="../screenshot/validation 2.png" width="60%">
+
+What can you get from this method?
+
+According finite-bin Hoeffding. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Eout(gm*)\leq&space;Etest(gm*)&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(gm*)\leq&space;Etest(gm*)&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(gm*)\leq Etest(gm*)+O(\sqrt{\frac{logM}{Ntest}})" /></a>
+
+Yes! We can get the best one But where is the Etest?
  
 ### Compare the method we already talk
 1. Ein
@@ -69,6 +72,9 @@ Ein <- Probability that H(n) and yn are not equal
 * Clean!!
 
 Validation Set Dval
+
+<img src="../screenshot/validation 3.png" width="60%">
+
 	Select K examples from D at random
 Generalization guarantee for all M:
 Eout(gm-)≤Etest(gm-)+O(√(log⁡M/Ntest)) 
