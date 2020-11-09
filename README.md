@@ -339,4 +339,3 @@ discriminative model: 判別模型
 ## Refer
 * 林軒田 - 機器學習基石
 * 林軒田 - 機器學習技法
-* Bishop - PRML
