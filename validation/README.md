@@ -61,10 +61,10 @@ Ein <- Probability that H(n) and yn are not equal
 * Infeasible
 * Clean!! But nowhere to get the Etest
 
-A NEW WAY~ <= Eval
-	Calculated from Dval
-	Feasible on hand
-	Clean!!
+3. A NEW WAY~ <= Eval
+* Calculated from Dval
+* Feasible on hand
+* Clean!!
 
 Validation Set Dval
 	 
