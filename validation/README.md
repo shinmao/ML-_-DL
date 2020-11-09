@@ -88,21 +88,24 @@ After getting the best <a href="https://www.codecogs.com/eqnedit.php?latex=g_{m}
  <img src="../screenshot/validation 5.png" width="40%">
  
 We can observe that blue line performed better that red and in-sample line.
+
 But why the red line is worse than in_sample line?
-	Because the Gm- use the less data eventually.
+
+Because the Gm- use the less data eventually.
 
 ### The dilemma of K
   <img src="../screenshot/validation 6.png"  width="80%">
 
 Large K:
 
-Make Eval closer to Eout(g-), but the Eout(g-) is far from Eout(gm)
+Make Eval closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{m})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{m})" title="E_{out}(g^{m})" /></a>
 
-Small K
-	Make Eout(g) closer to Eout(g-), but the Eout(g-) is far from Eval.
+Small K:
+
+Make Eout(g) closer to <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a>, but the <a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}(g^{-})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}(g^{-})" title="E_{out}(g^{-})" /></a> is far from Eval.
 	
 
-## In practice:	<a href="https://www.codecogs.com/eqnedit.php?latex=K=\frac{N}{5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K=\frac{N}{5}" title="K=\frac{N}{5}" /></a>
+### 	 In practice:	<a href="https://www.codecogs.com/eqnedit.php?latex=K=\frac{N}{5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K=\frac{N}{5}" title="K=\frac{N}{5}" /></a>
 
 ### Extreme Cass: What if K =1?
 
@@ -131,9 +134,6 @@ If our N is 10,000?? We must do 10,000 times computation.
 V-fold cross-validation: Random-Partition D to V equal parts and taking V-1 for training and 1 for validation.
 
 <img src="../screenshot/validation 10.png"  width="60%">
-	
-
-
  
 In practice, V =10
 
