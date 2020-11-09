@@ -46,13 +46,13 @@ Ein <- Probability that H(n) and yn are not equal
 		Use Ein is dangerous!!!  Ein IS BAD!!
  
 ### How about select by the best Etest?
-<img src="../screenshot/validation 2.png" width="60%">
+<img src="../screenshot/validation 2.png" width="50%">
 
 What can you get from this method?
 
 According finite-bin Hoeffding. 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=Eout(gm*)\leq&space;Etest(gm*)&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(gm*)\leq&space;Etest(gm*)&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(gm*)\leq Etest(gm*)+O(\sqrt{\frac{logM}{Ntest}})" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=Eout(g_{m}^{*})\leq&space;Etest(g_{m}^{*})&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(g_{m}^{*})\leq&space;Etest(g_{m}^{*})&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(g_{m}^{*})\leq Etest(g_{m}^{*})+O(\sqrt{\frac{logM}{Ntest}})" /></a>
 
 Yes! We can get the best one But where is the Etest?
  
@@ -71,17 +71,21 @@ Yes! We can get the best one But where is the Etest?
 * Feasible on hand
 * Clean!!
 
-Validation Set Dval
+### Validation Set Dval
 
-<img src="../screenshot/validation 3.png" width="60%">
+<img src="../screenshot/validation 3.png">
 
-	Select K examples from D at random
+Select K examples from D at random
 Generalization guarantee for all M:
-Eout(gm-)≤Etest(gm-)+O(√(log⁡M/Ntest)) 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Eout(g_{m}^{-})\leq&space;Etest(g_{m}^{-})&plus;O(\sqrt{\frac{logM}{Ntest}})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Eout(g_{m}^{-})\leq&space;Etest(g_{m}^{-})&plus;O(\sqrt{\frac{logM}{Ntest}})" title="Eout(g_{m}^{-})\leq Etest(g_{m}^{-})+O(\sqrt{\frac{logM}{Ntest}})" /></a>
+
+<img src="../screenshot/validation 4.png">
 	 
 	After getting the best gm- we can use the whole dataset to get the best gm.
  
-Does that work? 
+### Does that work?
+ <img src="../screenshot/validation 5.png" width="70%">
  
 We can observe that blue line performed better that red and in-sample line.
 But why the red line is worse than in_sample line?
