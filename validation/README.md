@@ -102,10 +102,9 @@ Small K
 	Make Eout(g) closer to Eout(g-), but the Eout(g-) is far from Eval.
 	
 
-	In practice:　K=N/5
+## In practice:	<a href="https://www.codecogs.com/eqnedit.php?latex=K=\frac{N}{5}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K=\frac{N}{5}" title="K=\frac{N}{5}" /></a>
 
 ### Extreme Cass: What if K =1?
-
 
 Take K=1, <a href="https://www.codecogs.com/eqnedit.php?latex=D_{val}^{(n)}&space;=&space;{(Xn,Yn)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{val}^{(n)}&space;=&space;{(Xn,Yn)}" title="D_{val}^{(n)} = {(Xn,Yn)}" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=E_{val}^{(n)}g_{n}^{-}&space;=&space;err(g_{n}^{-}(Xn),Yn)=&space;e_{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{val}^{(n)}g_{n}^{-}&space;=&space;err(g_{n}^{-}(Xn),Yn)=&space;e_{n}" title="E_{val}^{(n)}g_{n}^{-} = err(g_{n}^{-}(Xn),Yn)= e_{n}" /></a>
 
