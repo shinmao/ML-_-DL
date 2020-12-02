@@ -334,6 +334,7 @@ discriminative model: 判別模型
 
 ## DL
 * [什麼是Nueral Network?](./DL/README.md)
+* [CNN](./DL/README.md)
 * [BP (Back Propagation)](./back-propagation/README.md)
 
 ## Refer
