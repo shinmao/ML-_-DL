@@ -466,8 +466,9 @@ discriminative model: 判別模型
 * [SVM入場](./SVM/README.md)
 
 ## DL
-* 什麼是Nueral Network?
-* [BP (Back Propagation)](back-propagation/README.md)
+* [什麼是Nueral Network?](./DL/README.md)
+* [CNN](./DL/README.md)
+* [BP (Back Propagation)](./back-propagation/README.md)
 
 ### Leture 9 Linear Regression
 - 特徵x=(x0,x1,x2,....,xd)
