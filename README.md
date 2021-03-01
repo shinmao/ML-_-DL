@@ -7,6 +7,7 @@
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
   - [Training versus Testing](#Training-versus-Testing)
   - [Theory of Generalization](#Theory-of-Generalization)
+  - [The VC Dimension](#The-VC-Dimension)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
@@ -98,13 +99,40 @@ ML只是A.I.其中一個領域
 - 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
 - 2.No! 因為M小，選擇太少了
 
-
 ##### 在數量大的M:
 - 1.No! P[BAD]增加
 - 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
 
 ## Theory of Generalization
 ![圖](./screenshot/5.jpg)
+
+## The VC Dimension 
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/6.jpg "圖片名稱")
+![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/7.jpg "圖片名稱")
+
+#### M and dvc:
+
+##### 為了衡量一下M(amount of hypothesis set)和dvc大比較好還是小，提出兩個問提:
+- 1.我們可以確定Eout(g)靠近Ein(g)嗎?
+- 2.Ein(g)他夠小嗎?
+
+##### 在數量小的M:
+- 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
+- 2.No! 因為M小，選擇太少了
+
+
+##### 在數量大的M:
+- 1.No! P[BAD]增加
+- 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
+
+
+##### 在數量小的dvc:
+- 1.Yes! 會發現dvc帶入P[BAD]=<2*(2N)^dvc*exp(...)公式，因為dvc小，P[BAD]也會變小
+- 2.No! 因為dvc小，限制太多
+
+##### 在數量大的dvc:
+- 1.No! P[BAD]增加
+- 2.Yes! 很多權利
 
 ## Validation
 [Validation](./validation/README.md)
@@ -133,38 +161,6 @@ ML只是A.I.其中一個領域
 * [什麼是Nueral Network?](./DL/README.md)
 * [CNN](./DL/README.md)
 * [BP (Back Propagation)](./back-propagation/README.md)
-
-
-
-
-
-### Leture 7 The VC Dimension 
-![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/6.jpg "圖片名稱")
-![圖]( https://github.com/shinmao/ML-_-DL/blob/dev2/screenshot/7.jpg "圖片名稱")
-
-#### M and dvc:
-
-##### 為了衡量一下M(amount of hypothesis set)和dvc大比較好還是小，提出兩個問提:
-- 1.我們可以確定Eout(g)靠近Ein(g)嗎?
-- 2.Ein(g)他夠小嗎?
-
-##### 在數量小的M:
-- 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
-- 2.No! 因為M小，選擇太少了
-
-
-##### 在數量大的M:
-- 1.No! P[BAD]增加
-- 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
-
-
-##### 在數量小的dvc:
-- 1.Yes! 會發現dvc帶入P[BAD]=<2*(2N)^dvc*exp(...)公式，因為dvc小，P[BAD]也會變小
-- 2.No! 因為dvc小，限制太多
-
-##### 在數量大的dvc:
-- 1.No! P[BAD]增加
-- 2.Yes! 很多權利
 
 
 ### Leture 8 Noise and Error
