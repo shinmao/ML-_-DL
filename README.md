@@ -90,7 +90,7 @@ ML只是A.I.其中一個領域
 
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
 
-## Training V.S. Testing
+## Train versus Testing
 在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
 
 ##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
