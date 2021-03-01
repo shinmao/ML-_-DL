@@ -74,10 +74,8 @@ ML只是A.I.其中一個領域
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
 
 ## Training versus Testing
-為什麼機器可以學到東西呢?
-利用過去的資料我們可以使<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;0" title="E_{in}\approx 0" /></a> 代表訓練出來的模型可以完全符合input，但這不代表模型可以完美地進行預測。
 
-要進行完美的預測，我們必須將<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;E_{out}" title="E_{in}\approx E_{out}" /></a>才能表示模型具有預測的能力。
+利用過去的資料我們可以使<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;0" title="E_{in}\approx 0" /></a> 代表訓練出來的模型預測input的錯誤接近於0，但這不代表模型可以完美地預測。如果訓練出來的模型只能表現input卻不能對未知的資料進行預測的話，這個也只是一個overfitting的模型。因此我們必須訓練出可以將<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\approx&space;0" title="E_{out}\approx 0" /></a>的模型(模型對預測未知資料錯誤接近於0)才能表示模型具有預測的能力。
 在<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;E_{out}\approx&space;0" title="E_{in}\approx E_{out}\approx 0" /></a> 這樣的基礎下，<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\approx&space;0" title="E_{out}\approx 0" /></a>是機器在訓練的部分，而<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;E_{out}" title="E_{in}\approx E_{out}" /></a>是測試這個Model可不可行的階段
 
 ##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
