@@ -6,6 +6,7 @@
   - [學習方法](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
   - [Training versus Testing](#Training-versus-Testing)
+  - [Theory of Generalization](#Theory-of-Generalization)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
@@ -102,6 +103,9 @@ ML只是A.I.其中一個領域
 - 1.No! P[BAD]增加
 - 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
 
+## Theory of Generalization
+![圖](./screenshot/5.jpg)
+
 ## Validation
 [Validation](./validation/README.md)
 
@@ -131,8 +135,7 @@ ML只是A.I.其中一個領域
 * [BP (Back Propagation)](./back-propagation/README.md)
 
 
-### Leture 6 Theory of Generalization
-![圖](./screenshot/5.jpg)
+
 
 
 ### Leture 7 The VC Dimension 
