@@ -5,7 +5,7 @@
   - [維度](#維度)
   - [學習方法](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
-  - [Train versus Testing](#Train versus Testing)
+  - [Training versus Testing](#Training versus Testing)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
@@ -14,10 +14,6 @@
     - [SVM](#svm)
   - [DL](#dl)
   - 
-    - [Leture 5 Training V.S. Testing](#leture-5-training-vs-testing)
-        - [為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:](#為了衡量一下mamount-of-hypothesis-set大比較好還是小提出兩個問提)
-        - [在數量小的M:](#在數量小的m)
-        - [在數量大的M:](#在數量大的m)
     - [Leture 6 Theory of Generalization](#leture-6-theory-of-generalization)
     - [Leture 7 The VC Dimension](#leture-7-the-vc-dimension)
       - [M and dvc:](#m-and-dvc)
@@ -90,7 +86,7 @@ ML只是A.I.其中一個領域
 
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
 
-## Train versus Testing
+## Training versus Testing
 在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
 
 ##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
