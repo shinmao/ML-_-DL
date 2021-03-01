@@ -17,21 +17,6 @@
     - [SVM](#svm)
   - [DL](#dl)
   - 
-    - [Leture 6 Theory of Generalization](#leture-6-theory-of-generalization)
-    - [Leture 7 The VC Dimension](#leture-7-the-vc-dimension)
-      - [M and dvc:](#m-and-dvc)
-        - [為了衡量一下M(amount of hypothesis set)和dvc大比較好還是小，提出兩個問提:](#為了衡量一下mamount-of-hypothesis-set和dvc大比較好還是小提出兩個問提)
-        - [在數量小的M:](#在數量小的m-1)
-        - [在數量大的M:](#在數量大的m-1)
-        - [在數量小的dvc:](#在數量小的dvc)
-        - [在數量大的dvc:](#在數量大的dvc)
-    - [Leture 8 Noise and Error](#leture-8-noise-and-error)
-        - [VC bound在有雜訊的情況下會不會work?](#vc-bound在有雜訊的情況下會不會work)
-        - [目標分佈P(y|x) (理想的mini-target + noise):](#目標分佈pyx-理想的mini-target--noise)
-        - [Goal of Learning:](#goal-of-learning)
-        - [兩個主要的error measure:](#兩個主要的error-measure)
-        - [總的來說，ideal mini-target是noise和error組成的](#總的來說ideal-mini-target是noise和error組成的)
-        - [True negative, false negative有趣的例子:](#true-negative-false-negative有趣的例子)
 
 ## ML
 * What is machine learning?  
@@ -170,7 +155,7 @@ ML只是A.I.其中一個領域
 當然因為比較慢啊  
 
 ## Validation
-[Validation](./validation/README.md)
+* [Validation](./validation/README.md)
 
 ## 學習的可行性
 * [學習的可行性](./Feasibility-Learning/README.md)
