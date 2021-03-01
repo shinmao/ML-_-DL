@@ -5,14 +5,14 @@
   - [維度](#維度)
   - [學習方法：](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
-  - [validation](#validation)
+  - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
   - [Linear Regression](#linear-regression)
     - [Generative model v.s. Discriminative model](#generative-model-vs-discriminative-model)
     - [SVM](#svm)
   - [DL](#dl)
-  - [ㄚ柔的筆記](#ㄚ柔的筆記)
+  - 
     - [Leture 5 Training V.S. Testing](#leture-5-training-vs-testing)
         - [為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:](#為了衡量一下mamount-of-hypothesis-set大比較好還是小提出兩個問提)
         - [在數量小的M:](#在數量小的m)
@@ -89,7 +89,7 @@ ML只是A.I.其中一個領域
 
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
 
-## validation
+## alidation
 [Validation](./validation/README.md)
 
 ## 學習的可行性
@@ -117,8 +117,6 @@ ML只是A.I.其中一個領域
 * [CNN](./DL/README.md)
 * [BP (Back Propagation)](./back-propagation/README.md)
 
-## ㄚ柔的筆記
-
 ### Leture 5 Training V.S. Testing
 在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
 
@@ -134,14 +132,7 @@ ML只是A.I.其中一個領域
 ##### 在數量大的M:
 - 1.No! P[BAD]增加
 - 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
-
-
-![圖](./screenshot/2.jpg)
-![圖](./screenshot/3.jpg)
-![圖](./screenshot/4.jpg)
-
-
-
+- 
 
 ### Leture 6 Theory of Generalization
 ![圖](./screenshot/5.jpg)
@@ -179,8 +170,7 @@ ML只是A.I.其中一個領域
 ### Leture 8 Noise and Error
 
 ##### VC bound在有雜訊的情況下會不會work?
-依然會
-![圖](./screenshot/L8-1.jpg)
+當然
 
 ##### 目標分佈P(y|x) (理想的mini-target + noise):
 例子:P(<font color="blue">o<font>|x)=0.7, P(<font color="#f00">x<font>|x)=0.3
@@ -199,10 +189,11 @@ ML只是A.I.其中一個領域
 (2) squared error
 - 算y~和y之間的距離
 - 常用在regression
+
 ![圖](./screenshot/L8-2.jpg)
 ![圖](./screenshot/L8-3.jpg)
 ![圖](./screenshot/L8-4.jpg)
-##### 總的來說，ideal mini-target是noise和error組成的
+##### 結論: ideal mini-target是noise和error組成的
 
 
 ##### True negative, false negative有趣的例子:
