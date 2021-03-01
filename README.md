@@ -5,7 +5,7 @@
   - [維度](#維度)
   - [學習方法](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
-  - [Training versus Testing](#Training versus Testing)
+  - [Training versus Testing](#Training-versus-Testing)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
