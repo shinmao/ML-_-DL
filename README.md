@@ -3,8 +3,9 @@
   - [ML](#ml)
   - [ML數學概率基礎](#ml數學概率基礎)
   - [維度](#維度)
-  - [學習方法：](#學習方法)
+  - [學習方法](#學習方法)
   - [來談談我們不同種類的input](#來談談我們不同種類的input)
+  - [Train versus Testing](#Train versus Testing)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
@@ -63,7 +64,7 @@ ML只是A.I.其中一個領域
 * [維度災難 (Curse of dimensionality)](./dimension.md#維度災難)
 * [PLA 降維](./dimension.md#pca-principal-component-analysis)
 
-## 學習方法：
+## 學習方法
 | 方法        | 有沒有label | 描述  |
 | ------------- |:-------------:|:-----|
 | supervised learning | 全都有 | 二元分類，多元分類，回歸。按照輸出空間的話，還可以在區分出結構化學習(細節放在下面)。 |
@@ -88,6 +89,22 @@ ML只是A.I.其中一個領域
 | abstract feature | 完全抽象，沒有含義 |
 
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
+
+## Training V.S. Testing
+在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
+
+##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
+- 1.我們可以確定Eout(g)靠近Ein(g)嗎?
+- 2.Ein(g)他夠小嗎?
+
+##### 在數量小的M:
+- 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
+- 2.No! 因為M小，選擇太少了
+
+
+##### 在數量大的M:
+- 1.No! P[BAD]增加
+- 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
 
 ## Validation
 [Validation](./validation/README.md)
@@ -117,22 +134,6 @@ ML只是A.I.其中一個領域
 * [CNN](./DL/README.md)
 * [BP (Back Propagation)](./back-propagation/README.md)
 
-### Leture 5 Training V.S. Testing
-在Ein(g)≈Eout(g)≈0 這樣的基礎下，Eout(g)≈0是機器在訓練的部分，而Ein(g)≈Eout(g)是測試這個model可不可行的階段
-
-##### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
-- 1.我們可以確定Eout(g)靠近Ein(g)嗎?
-- 2.Ein(g)他夠小嗎?
-
-##### 在數量小的M:
-- 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
-- 2.No! 因為M小，選擇太少了
-
-
-##### 在數量大的M:
-- 1.No! P[BAD]增加
-- 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
-- 
 
 ### Leture 6 Theory of Generalization
 ![圖](./screenshot/5.jpg)
