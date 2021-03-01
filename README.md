@@ -89,7 +89,7 @@ ML只是A.I.其中一個領域
 
 所以我們要把feature都轉換為比較有意義的像是concrete feature！這個過程也稱為**特徵工程(feature engineering)**。
 
-## alidation
+## Validation
 [Validation](./validation/README.md)
 
 ## 學習的可行性
