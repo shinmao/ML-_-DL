@@ -8,6 +8,7 @@
   - [Training versus Testing](#Training-versus-Testing)
   - [Theory of Generalization](#Theory-of-Generalization)
   - [The VC Dimension](#The-VC-Dimension)
+  - [Noise and Error](#Noise-and-error)
   - [Validation](#Validation)
   - [學習的可行性](#學習的可行性)
   - [linear classification](#linear-classification)
@@ -134,36 +135,7 @@ ML只是A.I.其中一個領域
 - 1.No! P[BAD]增加
 - 2.Yes! 很多權利
 
-## Validation
-[Validation](./validation/README.md)
-
-## 學習的可行性
-* [學習的可行性](./Feasibility-Learning/README.md)
-
-## linear classification
-* [線性分類](linear-classification/README.md)
-* [線性判別函數(linear discriminant function)](linear-classification/README.md)
-* [Fisher線性判別函數](linear-classification/README.md)
-* [PLA](linear-classification/README.md)
-* [推薦閱讀：線性判別分析](https://ccjou.wordpress.com/2014/03/20/%E7%B7%9A%E6%80%A7%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90/)
-
-## Linear Regression
-* [線性迴歸](./linear-regression/README.md)
-
-### Generative model v.s. Discriminative model
-* [Generative model v.s. Discriminative model](./Gen-Model-and-Dis-Model/README.md)
-
-### SVM
-* [先從kernel trick是啥講起](./SVM/README.md)
-* [SVM入場](./SVM/README.md)
-
-## DL
-* [什麼是Nueral Network?](./DL/README.md)
-* [CNN](./DL/README.md)
-* [BP (Back Propagation)](./back-propagation/README.md)
-
-
-### Leture 8 Noise and Error
+## Noise and Error
 
 ##### VC bound在有雜訊的情況下會不會work?
 當然
@@ -191,9 +163,36 @@ ML只是A.I.其中一個領域
 ![圖](./screenshot/L8-4.jpg)
 ##### 結論: ideal mini-target是noise和error組成的
 
-
 ##### True negative, false negative有趣的例子:
 - Supermarket和CIA指紋辨識的false accecpt和false reject的成本
 
 找Ew in(h)最小值，即可得出最好的Ew in(h)
 當然因為比較慢啊  
+
+## Validation
+[Validation](./validation/README.md)
+
+## 學習的可行性
+* [學習的可行性](./Feasibility-Learning/README.md)
+
+## linear classification
+* [線性分類](linear-classification/README.md)
+* [線性判別函數(linear discriminant function)](linear-classification/README.md)
+* [Fisher線性判別函數](linear-classification/README.md)
+* [PLA](linear-classification/README.md)
+* [推薦閱讀：線性判別分析](https://ccjou.wordpress.com/2014/03/20/%E7%B7%9A%E6%80%A7%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90/)
+
+## Linear Regression
+* [線性迴歸](./linear-regression/README.md)
+
+### Generative model v.s. Discriminative model
+* [Generative model v.s. Discriminative model](./Gen-Model-and-Dis-Model/README.md)
+
+### SVM
+* [先從kernel trick是啥講起](./SVM/README.md)
+* [SVM入場](./SVM/README.md)
+
+## DL
+* [什麼是Nueral Network?](./DL/README.md)
+* [CNN](./DL/README.md)
+* [BP (Back Propagation)](./back-propagation/README.md)
