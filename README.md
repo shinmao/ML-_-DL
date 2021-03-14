@@ -80,19 +80,20 @@ ML只是A.I.其中一個領域
 利用過去的資料我們可以使<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;0" title="E_{in}\approx 0" /></a> 代表訓練出來的Model預測Input的錯誤接近於0，但這不代表Model可以完美地預測。如果訓練出來的Model只能表現input卻不能對未知的資料進行預測的話，這個也只是一個overfitting的Model。因此我們必須訓練出可以將<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\approx&space;0" title="E_{out}\approx 0" /></a>的Model(Model對預測未知資料錯誤接近於0)代表具有預測的能力。
 在<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;E_{out}\approx&space;0" title="E_{in}\approx E_{out}\approx 0" /></a> 這樣的基礎下，<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\approx&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\approx&space;0" title="E_{out}\approx 0" /></a>是機器在訓練的部分，而<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\approx&space;E_{out}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\approx&space;E_{out}" title="E_{in}\approx E_{out}" /></a>是測試這個Model可不可行的階段。.
 
-如何
-
-### 為了衡量一下M(amount of hypothesis set)大比較好還是小，提出兩個問提:
+###想要衡量模型的好壞我們必須提出以下兩個問題: Trade off on M(amount of hypothesis set)
 - 1.我們可以確定<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>靠近<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>嗎?
 - 2.<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>他夠小嗎?
 
-### 在數量小的M:
-- 1.Yes! 會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小
-- 2.No! 因為M小，選擇太少了
+### 我們比較一下M(amount of hypothesis set)的大小所帶來的影響
 
-### 在數量大的M:
-- 1.No! P[BAD]增加
-- 2.Yes! 因為M大，選擇很多，可以找到夠小的Ein(g)
+| M              | 優點  |缺點  |
+| ------------- |:-----|:-----|
+| 少量 |會發現M帶入P[BAD]=<2*M*exp(...)公式，因為M小，P[BAD]也會變小 |因為M小，選擇太少了|
+| 大量 | 因為M大，選擇很多，可以找到夠小的Ein(g) | P[BAD]增加|
+
+
+那如果M = ∞ 會發生甚麼事呢?
+從上面我們可以知道選擇是很重要的，並不是越多或越少就是越好。既然無限的M是不可行的，我們假設在有限的m裡面來找
 
 ## Theory of Generalization
 ![圖](./screenshot/5.jpg)
