@@ -84,7 +84,7 @@ ML只是A.I.其中一個領域
 - 1.我們可以確定<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>靠近<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>嗎?
 - 2.<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>他夠小嗎?
 
-### 我們比較一下M(amount of hypothesis set)的大小所帶來的影響
+###我們比較一下M(amount of hypothesis set)的大小所帶來的影響
 
 | M              | 優點  |缺點  |
 | ------------- |:-----|:-----|
