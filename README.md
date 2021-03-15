@@ -122,8 +122,16 @@ Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.cod
 | 2D Perceptrons | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)<&space;2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)<&space;2^{N}" title="m_{H}(N)< 2^{N}" /></a> in some case|
 
 #### Break Point
-在前面我們提出要用<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a>來取代M是為了讓機器能夠學習。在Four Growth Function的表裡我們可以知道Postive rays與Positive Intervals是多項式且<<<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>，這代表機器學習是可行的。Convex Sets是指數型的成長Growth Function = <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>。而2D Perceptrons，我們在先前的的[分類Hypothesis](#分類Hypothesis)
+在前面我們提出要用<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a>來取代M是為了讓機器能夠學習。在Four Growth Function的表裡我們可以知道Postive rays與Positive Intervals是多項式且<<<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>，這代表機器學習是可行的。Convex Sets是指數型的成長Growth Function = <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>。而2D Perceptrons，我們在先前的[分類Hypothesis](#分類Hypothesis)可以發現在4就已經找到最小的Break Point，因此我們可以得到以下表。
 
+| Growth Function|   | Break Point|
+| ------------- |:-----|:-----|
+| Postive rays| <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=N&plus;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=N&plus;1" title="m_{H}(N)=N+1" /></a>  | 2  | 
+| Positive Intervals|<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1" title="m_{H}(N)=\frac{1}{2}N^{2}+\frac{1}{2}N+1" /></a> |3  | 
+| Convex Sets | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=2^{N}" title="m_{H}(N)=2^{N}" /></a> | No  |
+| 2D Perceptrons | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)<&space;2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)<&space;2^{N}" title="m_{H}(N)< 2^{N}" /></a> in some case| 4  |
+
+從上表我們可以發現在Postive rays時，N為1次方而Break Point=2；在Positive Intervals時，N為2次方而Break Point=3。因此我們可以推測當<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=&space;2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=&space;2^{N}" title="m_{H}(N)= 2^{N}" /></a>時 Beak Point = <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=&space;O(N^{k-1})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=&space;O(N^{k-1})" title="m_{H}(N)= O(N^{k-1})" /></a>。
 
 
 ## Theory of Generalization
