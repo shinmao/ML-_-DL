@@ -121,6 +121,8 @@ Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.cod
 | Convex Sets | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=2^{N}" title="m_{H}(N)=2^{N}" /></a> |
 | 2D Perceptrons | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)<&space;2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)<&space;2^{N}" title="m_{H}(N)< 2^{N}" /></a> in some case|
 
+#### Break Point
+在前面我們提出要用<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a>來取代M是為了讓機器能夠學習。在Four Growth Function的表裡我們可以知道Postive rays與Positive Intervals是多項式且<<<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>，這代表機器學習是可行的。Convex Sets是指數型的成長Growth Function = <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>。而2D Perceptrons，我們在先前的的[分類Hypothesis](#####分類Hypothesis)
 
 
 
