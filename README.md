@@ -109,10 +109,17 @@ Dichotomy (二分法)就是指上述在平面或是一度空間將值分為兩�
 但是卻會依賴X而產生不同的Dichotomy，為了解決這個問題，利用Growth Function來找出
 Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" title="\left | H(X_{1},X_{2},X_{3}...,X_{n}) \right |" /></a>找出最大的dichotomy。
 如果我們從單一dichotomy來看的話，在一度的Postive rate上可以發現:如果我們有n個點的話，<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a> = N+1
-如果我們用一度的Positive Intervals來探討的話就會發現<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" title="m_{H}(N)= \binom{N+1}{2}+1 = \frac{1}{2}N^{2}+\frac{1}{2}N+1< < N^{2}" /></a> When N is LARGE。即使在二度的平面上最大的<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a> 也只會等於 <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>
+如果我們用一度的Positive Intervals來探討的話就會發現<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" title="m_{H}(N)= \binom{N+1}{2}+1 = \frac{1}{2}N^{2}+\frac{1}{2}N+1< < N^{2}" /></a> When N is LARGE。即使在Convex Sets上最大的<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a> 也只會等於 <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>。
 
 由上我們可以知道在大多數時候使用Growth Function可以有效地降低Over-Estimating。
 
+##### The Four Growth Function
+| Growth Function|   |
+| ------------- |:-----|
+| Postive rays| <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=N&plus;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=N&plus;1" title="m_{H}(N)=N+1" /></a>  |
+| Positive Intervals|<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1" title="m_{H}(N)=\frac{1}{2}N^{2}+\frac{1}{2}N+1" /></a> |
+| Convex Sets | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=2^{N}" title="m_{H}(N)=2^{N}" /></a> |
+| 2D Perceptrons | <a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)<&space;2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)<&space;2^{N}" title="m_{H}(N)< 2^{N}" /></a> in some case|
 
 
 
