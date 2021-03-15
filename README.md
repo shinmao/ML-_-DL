@@ -84,7 +84,7 @@ ML只是A.I.其中一個領域
 - 1.我們可以確定<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>靠近<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>嗎?
 - 2.<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>他夠小嗎?
 
-從上面兩個問題我們可以知道M的選擇直接影響了機器學習的問題 -> 機器能不能學習
+從上面兩個問題我們可以知道M的選擇直接影響了機器學習的核心問題 -> 機器能不能學習?
 
 #### 我們比較一下M(amount of hypothesis set)的大小所帶來的影響
 
@@ -104,9 +104,15 @@ ML只是A.I.其中一個領域
 ##### 分類Hypothesis
 為了解決Over-Estimating，將Hypothesis進行分類便可以找出相似的Hypothesis。那我們開如何歸類呢? 我們假設在平面上有幾個點(Hypothesis)並思考要如何利用直線在平面上將點分開。如果有兩個點的話我們只需要一條線就可以分開並會出現四種分法[(0,0),(X,X), (0,X), (X,0)]，如果有三個點的話會出現把八種分法[(0,0,0), (X,X,X), (0,X,X), (X,0,X), (0,0,X), (X,X,0), (0,X,0), (X,0,0)]，再把共線性考慮進去的話則是少於八種。歸納以上我們可以發現分割的線會小於<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>。我們稱這些線為有效的線(Effective Number of Lines)。
 
+##### Dichotomy & Growth Function
 Dichotomy (二分法)就是指上述在平面或是一度空間將值分為兩類的方法，我們可以知道當我們有多個Hypothesis便會出現小於<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>個Dichotomies。
 但是卻會依賴X而產生不同的Dichotomy，為了解決這個問題，利用Growth Function來找出
-Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" title="\left | H(X_{1},X_{2},X_{3}...,X_{n}) \right |" /></a>找出最大的dichotomy。如果我們從單一個dichotomy來看的話，再一度的Postive rate上可以發現:如果我們有n個點的話可以切成n+1個<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a>
+Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" title="\left | H(X_{1},X_{2},X_{3}...,X_{n}) \right |" /></a>找出最大的dichotomy。
+如果我們從單一dichotomy來看的話，在一度的Postive rate上可以發現:如果我們有n個點的話，<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a> = N+1
+如果我們用一度的Positive Intervals來探討的話就會發現<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)=&space;\binom{N&plus;1}{2}&plus;1&space;=&space;\frac{1}{2}N^{2}&plus;\frac{1}{2}N&plus;1<&space;<&space;N^{2}" title="m_{H}(N)= \binom{N+1}{2}+1 = \frac{1}{2}N^{2}+\frac{1}{2}N+1< < N^{2}" /></a> When N is LARGE。即使在二度的平面上最大的<a href="https://www.codecogs.com/eqnedit.php?latex=m_{H}(N)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{H}(N)" title="m_{H}(N)" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex=N^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N^{2}" title="N^{2}" /></a>
+
+由上我們可以知道在大多數時候使用Growth Function可以有效地降低Over-Estimating。
+
 
 
 
