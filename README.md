@@ -98,10 +98,17 @@ ML只是A.I.其中一個領域
 #### 那我們該如何找到M(Amount of Hypothesis Set)
 
 ##### Over-Estimating
-對我們來說<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>與<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>相差太多就是不好的Hypothesis，如果我們把所有的hypothesis發生不好的機率找到並聯集起來就可以找出所有的Bad Event。假設M = ∞時，Bad Event = ∞。這樣我們尋找Bad Event就變成無意義了。
+對我們來說<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>與<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>相差太多就是不好的Hypothesis，如果我們把所有的hypothesis發生不好的機率找到並聯集起來就可以找出所有的Bad Event。假設M = ∞時，Bad Event = ∞，這樣我們尋找Bad Event就變成無意義了。
 但如果我們來探討每個Hypothesis會發現並不是所有的Bad Event都是獨立的，這代表我們利用聯集來找所有的Bad Event是不盡然正確而且會造成Over-Estimating。
 
-#####
+##### 分類Hypothesis
+為了解決Over-Estimating，將Hypothesis進行分類便可以找出相似的Hypothesis。那我們開如何歸類呢? 我們假設在平面上有幾個點(Hypothesis)並思考要如何利用直線在平面上將點分開。如果有兩個點的話我們只需要一條線就可以分開並會出現四種分法[(0,0),(X,X), (0,X), (X,0)]，如果有三個點的話會出現把八種分法[(0,0,0), (X,X,X), (0,X,X), (X,0,X), (0,0,X), (X,X,0), (0,X,0), (X,0,0)]，再把共線性考慮進去的話則是少於八種。歸納以上我們可以發現分割的線會小於<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>。我們稱這些線為有效的線(Effective Number of Lines)。
+
+Dichotomy (二分法)就是指上述在平面或是一度空間將值分為兩類，我們可以知道當我們有多個Hypothesis便會出現小於<a href="https://www.codecogs.com/eqnedit.php?latex=2^{N}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?2^{N}" title="2^{N}" /></a>個Dichotomies。
+但是卻會依賴X而產生不同的Dichotomy，為了解決這個問題，利用Growth Function來找出
+Growth Function (成長函數)是指在N個Hypothesis中<a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;|&space;H(X_{1},X_{2},X_{3}...,X_{n})&space;\right&space;|" title="\left | H(X_{1},X_{2},X_{3}...,X_{n}) \right |" /></a>找出最大的dichotomy。
+
+
 
 
 ## Theory of Generalization
