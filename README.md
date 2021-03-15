@@ -86,7 +86,7 @@ ML只是A.I.其中一個領域
 
 從上面兩個問題我們可以知道M的選擇直接影響了機器學習的核心問題 -> 機器能不能學習?
 
-#### 我們比較一下M(amount of hypothesis set)的大小所帶來的影響
+#### 我們比較一下M(Amount Of Hypothesis Set)的大小所帶來的影響
 
 | M              | 優點  |缺點  |
 | ------------- |:-----|:-----|
@@ -95,7 +95,7 @@ ML只是A.I.其中一個領域
 
 從上面我們可以知道選擇是很重要的，並不是越多或越少就是越好。既然無限的M是不可行的，我們假設在有限的<a href="https://www.codecogs.com/eqnedit.php?latex=m_{\left&space;(&space;H&space;\right&space;)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?m_{\left&space;(&space;H&space;\right&space;)}" title="m_{\left ( H \right )}" /></a>找M似乎是可行的。
 
-#### 那我們該如何找到M(Amount of Hypothesis Set)
+#### 那我們該如何找到M(Amount Of Hypothesis Set)
 
 ##### Over-Estimating
 對我們來說<a href="https://www.codecogs.com/eqnedit.php?latex=E_{out}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{out}\left&space;(&space;g&space;\right&space;)" title="E_{out}\left ( g \right )" /></a>與<a href="https://www.codecogs.com/eqnedit.php?latex=E_{in}\left&space;(&space;g&space;\right&space;)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?E_{in}\left&space;(&space;g&space;\right&space;)" title="E_{in}\left ( g \right )" /></a>相差太多就是不好的Hypothesis，如果我們把所有的hypothesis發生不好的機率找到並聯集起來就可以找出所有的Bad Event。假設M = ∞時，Bad Event = ∞，這樣我們尋找Bad Event就變成無意義了。
